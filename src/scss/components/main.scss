@@ -1,0 +1,147 @@
+#main {
+  background-image: url(../../images/main.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 80px);
+  position: relative;
+}
+.main {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  height: 100%;
+  &__title {
+    margin-top: 203px;
+    color: $bg-dark;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: -1.12px;
+    text-transform: uppercase;
+    @media (max-width: 1280px) {
+      margin-top: 100px;
+    }
+    @media (max-width: 768px) {
+      font-size: 36px;
+      line-height: 50px;
+    }
+    @media (max-width: 480px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin-top: 9px;
+    margin-bottom: 16px;
+    @media (max-width: 480px) {
+      margin-bottom: 9px;
+    }
+  }
+  &__text-top {
+    color: $text;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: -0.48px;
+    margin-bottom: 9px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 0;
+    }
+  }
+  &__text-bottom {
+    color: $text;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: -0.48px;
+    @media (max-width: 768px) {
+      font-size: 18px;
+    }
+    @media (max-width: 480px) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+  &__btns {
+    @include flex(row, center, center);
+    gap: 47px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translate(-50%, 0);
+    width: 581px;
+    height: 122px;
+    padding: 32px 24px 42px 24px;
+    border-radius: 5px 5px 0px 0px;
+    background: rgba(251, 255, 254, 0.65);
+    @media (max-width: 768px) {
+      @include flex(column, center, center);
+      gap: 25px;
+      width: 320px;
+      height: 200px;
+    }
+    .btn-dark {
+      @include flex(row, center, center);
+      gap: 8px;
+      padding: 12px 20px;
+      width: 243px;
+      height: 48px;
+      color: $bg-light;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      border: 1px solid $bg-dark;
+      background: $bg-dark;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      @include transition;
+      cursor: pointer;
+      svg {
+        fill: $bg-light;
+        @include transition;
+      }
+      &:hover svg {
+        fill: $bg-dark;
+      }
+      &:hover {
+        color: $bg-dark;
+        background: $bg-light;
+      }
+    }
+    .btn-light {
+      @include flex(row, center, center);
+      gap: 8px;
+      padding: 12px 20px;
+      width: 243px;
+      height: 48px;
+      color: $bg-dark;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      border: 1px solid $bg-dark;
+      background: $bg-light;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      @include transition;
+      cursor: pointer;
+      svg {
+        fill: $bg-dark;
+        @include transition;
+      }
+      &:hover svg {
+        fill: $bg-light;
+      }
+      &:hover {
+        color: $bg-light;
+        background: $bg-dark;
+      }
+    }
+  }
+}

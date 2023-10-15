@@ -62,16 +62,54 @@
           <div class="basket__dot"></div>
         </li>
       </ul>
+      <button class="burger" id="burgerButton">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="3"
+          viewBox="0 0 24 3"
+          fill="none"
+        >
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="3"
+          viewBox="0 0 24 3"
+          fill="none"
+        >
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="3"
+          viewBox="0 0 24 3"
+          fill="none"
+        >
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
     </div>
   </div>
 </header>
 <div style="display: none" id="menu">
   <div class="container">
+    <ul class="mobile__nav">
+      <li class="mobile__nav-item"><a href="#">Продукти</a></li>
+      <li class="mobile__nav-item"><a href="#">Наші розробки</a></li>
+      <li class="mobile__nav-item"><a href="#">Про нас</a></li>
+      <li class="mobile__nav-item"><a href="#">Контакти</a></li>
+    </ul>
     <ul class="menu products" id="products-menu">
       <li class="menu__item">
         <img class="menu__item-img" src="../images/header-plug.png" alt="" />
         <div class="menu__item-info">
-          <h5>Випарник конденсату настінний</h5>
+          <h5>
+            Випарник конденсату<br />
+            настінний
+          </h5>
           <p>Зменшує витрату елктроенергії</p>
           <p>Провірена якість</p>
         </div>
@@ -79,7 +117,10 @@
       <li class="menu__item">
         <img class="menu__item-img" src="../images/header-plug.png" alt="" />
         <div class="menu__item-info">
-          <h5>Випарник конденсату для зовнішнього блоку</h5>
+          <h5>
+            Випарник конденсату<br />
+            для зовнішнього блоку
+          </h5>
           <p>Зменшує витрату елктроенергії</p>
           <p>Провірена якість</p>
         </div>
@@ -87,7 +128,10 @@
       <li class="menu__item">
         <img class="menu__item-img" src="../images/header-plug.png" alt="" />
         <div class="menu__item-info">
-          <h5>Випарник конденсату настінний</h5>
+          <h5>
+            Випарник конденсату<br />
+            для внутрішнього блоку
+          </h5>
           <p>Зменшує витрату елктроенергії</p>
           <p>Провірена якість</p>
         </div>
@@ -145,17 +189,15 @@
     });
 
     selectOptions.addEventListener('click', function (e) {
+      console.log(e.target.tagName);
       if (e.target.tagName === 'LI') {
         selectedLanguage.textContent = e.target.textContent;
         customSelect.classList.remove('active');
         selectArrow.style.transform = 'rotate(0deg)';
-        // Опціонально: Оновити значення селекта
         document.querySelector('#language').value =
           e.target.getAttribute('value');
       }
     });
-
-    // Додати обробник подій для закриття селектора при кліку в інше місце екрану
     document.addEventListener('click', function (e) {
       if (!customSelect.contains(e.target)) {
         customSelect.classList.remove('active');
@@ -166,38 +208,165 @@
 
   // ==========================================================
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const productsMenu = document.getElementById('products-menu');
-    const ourDesignsMenu = document.getElementById('our-designs-menu');
-    const menu = document.getElementById('menu'); // Отримуємо елемент меню
+  if (window.innerWidth > 991) {
+    document.addEventListener('DOMContentLoaded', function () {
+      const productsMenu = document.getElementById('products-menu');
+      const ourDesignsMenu = document.getElementById('our-designs-menu');
+      const menu = document.getElementById('menu');
+      const firstItem = document.querySelector(
+        '.header__nav-item:nth-child(1)'
+      );
+      const secondItem = document.querySelector(
+        '.header__nav-item:nth-child(2)'
+      );
 
-    // Обробник кліку на "Продукти"
-    document
-      .querySelector('.header__nav-item:nth-child(1) a')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        productsMenu.style.display = 'flex';
-        ourDesignsMenu.style.display = 'none';
-        menu.style.display = 'flex'; // Відображаємо меню
+      document
+        .querySelector('.header__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'flex';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'flex';
+          firstItem.classList.add('active');
+          secondItem.classList.remove('active');
+        });
+
+      document
+        .querySelector('.header__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'flex';
+          menu.style.display = 'flex';
+          firstItem.classList.remove('active');
+          secondItem.classList.add('active');
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.header__nav')) {
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'none';
+          firstItem.classList.remove('active');
+          secondItem.classList.remove('active');
+        }
       });
+    });
+  }
 
-    // Обробник кліку на "Наші розробки"
-    document
-      .querySelector('.header__nav-item:nth-child(2) a')
-      .addEventListener('click', function (e) {
-        e.preventDefault();
-        productsMenu.style.display = 'none';
-        ourDesignsMenu.style.display = 'flex';
-        menu.style.display = 'flex'; // Відображаємо меню
-      });
+  // ==================================================
+  const burgerButton = document.querySelector('.burger');
+  const menuMobile = document.getElementById('menu');
 
-    // Додатковий обробник подій для закриття меню при кліку в інше місце екрану
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.header__nav')) {
-        productsMenu.style.display = 'none';
-        ourDesignsMenu.style.display = 'none';
-        menu.style.display = 'none'; // Приховуємо меню
+  if (window.innerWidth < 991) {
+    burgerButton.addEventListener('click', () => {
+      if (menuMobile.style.display === 'none') {
+        menuMobile.style.display = 'flex';
+        menuMobile.style.display = 'flex';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="35"
+        viewBox="0 0 34 35"
+        fill="#fbfffe"
+      >
+        <path
+          d="M21.8041 24.4444L16.8418 19.4821L11.8795 24.4443C11.6163 24.7076 11.2593 24.8554 10.8871 24.8554C10.5148 24.8554 10.1578 24.7076 9.89461 24.4443C9.63139 24.1811 9.48352 23.8241 9.48352 23.4519C9.48352 23.0797 9.63139 22.7227 9.89461 22.4594L14.8569 17.4972L9.89461 12.5349C9.63139 12.2717 9.48352 11.9147 9.48352 11.5424C9.48352 11.1702 9.63139 10.8132 9.89461 10.55C10.1578 10.2868 10.5148 10.1389 10.8871 10.1389C11.2593 10.1389 11.6163 10.2868 11.8795 10.55L16.8418 15.5122L21.8041 10.55C22.0673 10.2868 22.4243 10.1389 22.7965 10.1389C23.1688 10.1389 23.5258 10.2868 23.789 10.55C24.0522 10.8132 24.2001 11.1702 24.2001 11.5424C24.2001 11.9147 24.0522 12.2717 23.789 12.5349L18.8267 17.4972L23.789 22.4594C24.0522 22.7227 24.2001 23.0797 24.2001 23.4519C24.2001 23.8241 24.0522 24.1811 23.789 24.4443C23.5258 24.7076 23.1688 24.8554 22.7965 24.8554C22.4243 24.8554 22.0673 24.7076 21.8041 24.4444Z"
+        />
+      </svg>
+    `;
+      } else {
+        menuMobile.style.display = 'none';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    `;
       }
     });
-  });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const products = document.querySelector('.products');
+      const ourDesigns = document.querySelector('.our-designs');
+      const firstItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(1)'
+      );
+      const secondItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(2)'
+      );
+      const body = document.querySelector('body');
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'flex';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.add('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'flex';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.add('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.mobile__nav')) {
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'none';
+        }
+      });
+    });
+  }
 </script>
