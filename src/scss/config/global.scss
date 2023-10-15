@@ -14,11 +14,21 @@ body {
 
 body {
   background: $bg-light;
-  color: $text;
+  font-family: $font-main;
+  font-size: 24px;
   font-style: normal;
 }
 
 // Container
+.container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 64px;
+  margin: 0 auto;
+  @media (max-width: 991px) {
+    padding: 0 20px;
+  }
+}
 
 /* Стилі для скроллу в Chrome та Safari */
 ::-webkit-scrollbar {
