@@ -76,6 +76,7 @@
   top: 80px;
   background-color: $bg-dark;
   padding: 23px 0 32px 0;
+  z-index: 100;
   @media (max-width: 991px) {
     padding: 0;
   }

@@ -1,0 +1,138 @@
+<footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__list-one">
+        <img src="../images/logo.svg" alt="" />
+        <p>
+          Copyright 2022, Climate of the future <br />
+          All Rights Reserved
+        </p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови базової гарантії</a>
+        <ul class="list__icons">
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/instagram.svg" alt="" /></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/facebook.svg" alt="" /></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/Twitter.svg" alt="" /></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/Linkedin.svg" alt="" /></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrap">
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Сервіси</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item"><a href="#">Про нас</a></li>
+            <li class="sub-list-item"><a href="#">Гарантія</a></li>
+            <li class="sub-list-item"><a href="#">Оплата і доставка</a></li>
+            <li class="sub-list-item"><a href="#">Контакти</a></li>
+            <li class="sub-list-item"><a href="#">F&Q</a></li>
+          </ul>
+        </div>
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Продукти</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item"><a href="#">Каталог</a></li>
+            <li class="sub-list-item">
+              <a href="#">Патенти та технології</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list-three">
+          <h5>Приймаємо платежі</h5>
+          <ul>
+            <li><img src="../images/PayPal.svg" alt="" /></li>
+            <li><img src="../images/Stripe.svg" alt="" /></li>
+            <li><img src="../images/GooglePay.svg" alt="" /></li>
+            <li><img src="../images/ApplePay.svg" alt="" /></li>
+            <li><img src="../images/Mastercard.svg" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__form">
+        <form class="form">
+          <h4 class="form__title">Залишились питання?</h4>
+          <label class="form__label">ПІБ</label>
+          <input
+            class="form__input"
+            type="text"
+            placeholder="example@mail.com"
+          />
+          <label class="form__label">Мобільний телефон</label>
+          <input
+            class="form__input"
+            type="text"
+            placeholder="+380 97 68 57 067"
+          />
+        </form>
+        <button class="footer__form-btn">
+          Надіслати повідомлення
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+          >
+            <path
+              d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="news">
+  <div class="container">
+    <div class="news">
+      <button class="news-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <g clip-path="url(#clip0_1481_858)">
+            <path
+              d="M16.59 15.4099L12 10.8299L7.41 15.4099L6 13.9999L12 7.99991L18 13.9999L16.59 15.4099Z"
+              fill="#FBFFFE"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1481_858">
+              <rect
+                width="24"
+                height="24"
+                fill="white"
+                transform="matrix(-1 0 0 -1 24 24)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <p>News</p>
+    </div>
+  </div>
+</div>
+<script>
+  const openFooter = document.querySelector('.news-btn');
+  const footer = document.getElementById('footer');
+
+  openFooter.addEventListener('click', () => {
+    if (footer.style.bottom !== '40px') {
+      footer.style.bottom = '40px';
+      openFooter.style.transform = 'rotate(180deg)';
+    } else {
+      footer.style.bottom = '-100%';
+      openFooter.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
