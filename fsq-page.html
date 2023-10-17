@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>
+    .loaded {
+      opacity: 1;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231017214423">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231017214423">
+</head>
+
+  <body>
+    <header id="header">
+  <div class="container">
+    <div class="header">
+      <div class="header__logo">
+        <img src="../images/logo.svg" alt="logo">
+      </div>
+      <ul class="header__nav">
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Продукти</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Наші розробки</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Про нас</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Контакти</a>
+        </li>
+      </ul>
+      <ul class="header__select">
+        <li class="lang">
+          <div class="custom-select">
+            <div class="select-header">
+              <span id="selected-language">UA</span>
+              <svg id="select-arrow" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="select-options">
+              <li value="en">UA</li>
+              <li value="fr">EN</li>
+            </ul>
+          </div>
+        </li>
+        <li class="basket">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_1457_3229)">
+              <path d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967M8.33301 17.4999C8.33301 17.9602 7.95991 18.3333 7.49967 18.3333C7.03944 18.3333 6.66634 17.9602 6.66634 17.4999C6.66634 17.0397 7.03944 16.6666 7.49967 16.6666C7.95991 16.6666 8.33301 17.0397 8.33301 17.4999ZM17.4997 17.4999C17.4997 17.9602 17.1266 18.3333 16.6663 18.3333C16.2061 18.3333 15.833 17.9602 15.833 17.4999C15.833 17.0397 16.2061 16.6666 16.6663 16.6666C17.1266 16.6666 17.4997 17.0397 17.4997 17.4999Z" stroke="#FBFFFE" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1457_3229">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="basket__dot"></div>
+        </li>
+      </ul>
+      <button class="burger" id="burgerButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div style="display: none" id="menu">
+  <div class="container">
+    <ul class="mobile__nav">
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Продукти</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Наші розробки</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Про нас</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Контакти</a>
+      </li>
+    </ul>
+    <ul class="menu products" id="products-menu">
+      <li class="menu__item">
+        <img class="menu__item-img" src="../images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            настінний
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="../images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            для зовнішнього блоку
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="../images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            для внутрішнього блоку
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+    </ul>
+    <ul class="menu our-designs" id="our-designs-menu">
+      <li class="menu__item">
+        <img class="menu__item-img" src="../images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>Кондеціонери</h5>
+          <p>Приємна ціна</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="../images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>Заслонки</h5>
+          <p>Приємна ціна</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item-btn">
+        <button class="btn">
+          Дізнатися більше
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+            <path d="M12.4688 13.2237V3.23081L2.03263 13.667L0.833008 12.4674L11.2692 2.03121H1.27816V0.333659H12.4688H12.9667H13.8551H14.1663V0.644876V1.53326V2.03121V13.2237H12.4688Z"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelect = document.querySelector('.custom-select');
+    const selectHeader = document.querySelector('.select-header');
+    const selectArrow = document.querySelector('#select-arrow');
+    const selectOptions = document.querySelector('.select-options');
+    const selectedLanguage = document.querySelector('#selected-language');
+
+    selectHeader.addEventListener('click', function () {
+      customSelect.classList.toggle('active');
+      selectArrow.style.transform = customSelect.classList.contains('active')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+    });
+
+    selectOptions.addEventListener('click', function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === 'LI') {
+        selectedLanguage.textContent = e.target.textContent;
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+        document.querySelector('#language').value =
+          e.target.getAttribute('value');
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  // ==========================================================
+
+  if (window.innerWidth > 991) {
+    document.addEventListener('DOMContentLoaded', function () {
+      const productsMenu = document.getElementById('products-menu');
+      const ourDesignsMenu = document.getElementById('our-designs-menu');
+      const menu = document.getElementById('menu');
+      const firstItem = document.querySelector(
+        '.header__nav-item:nth-child(1)'
+      );
+      const secondItem = document.querySelector(
+        '.header__nav-item:nth-child(2)'
+      );
+
+      document
+        .querySelector('.header__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'flex';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'flex';
+          firstItem.classList.add('active');
+          secondItem.classList.remove('active');
+        });
+
+      document
+        .querySelector('.header__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'flex';
+          menu.style.display = 'flex';
+          firstItem.classList.remove('active');
+          secondItem.classList.add('active');
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.header__nav')) {
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'none';
+          firstItem.classList.remove('active');
+          secondItem.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  // ==================================================
+  const burgerButton = document.querySelector('.burger');
+  const menuMobile = document.getElementById('menu');
+
+  if (window.innerWidth < 991) {
+    burgerButton.addEventListener('click', () => {
+      if (menuMobile.style.display === 'none') {
+        menuMobile.style.display = 'flex';
+        menuMobile.style.display = 'flex';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="35"
+        viewBox="0 0 34 35"
+        fill="#fbfffe"
+      >
+        <path
+          d="M21.8041 24.4444L16.8418 19.4821L11.8795 24.4443C11.6163 24.7076 11.2593 24.8554 10.8871 24.8554C10.5148 24.8554 10.1578 24.7076 9.89461 24.4443C9.63139 24.1811 9.48352 23.8241 9.48352 23.4519C9.48352 23.0797 9.63139 22.7227 9.89461 22.4594L14.8569 17.4972L9.89461 12.5349C9.63139 12.2717 9.48352 11.9147 9.48352 11.5424C9.48352 11.1702 9.63139 10.8132 9.89461 10.55C10.1578 10.2868 10.5148 10.1389 10.8871 10.1389C11.2593 10.1389 11.6163 10.2868 11.8795 10.55L16.8418 15.5122L21.8041 10.55C22.0673 10.2868 22.4243 10.1389 22.7965 10.1389C23.1688 10.1389 23.5258 10.2868 23.789 10.55C24.0522 10.8132 24.2001 11.1702 24.2001 11.5424C24.2001 11.9147 24.0522 12.2717 23.789 12.5349L18.8267 17.4972L23.789 22.4594C24.0522 22.7227 24.2001 23.0797 24.2001 23.4519C24.2001 23.8241 24.0522 24.1811 23.789 24.4443C23.5258 24.7076 23.1688 24.8554 22.7965 24.8554C22.4243 24.8554 22.0673 24.7076 21.8041 24.4444Z"
+        />
+      </svg>
+    `;
+      } else {
+        menuMobile.style.display = 'none';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    `;
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const products = document.querySelector('.products');
+      const ourDesigns = document.querySelector('.our-designs');
+      const firstItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(1)'
+      );
+      const secondItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(2)'
+      );
+      const body = document.querySelector('body');
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'flex';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.add('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'flex';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.add('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.mobile__nav')) {
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'none';
+        }
+      });
+    });
+  }
+</script>
+
+    <main><div id="fsq">
+  <div class="container">
+    <div class="breadcrumbs">
+      <span>Головна</span>
+      <span>Категорія</span>
+      <span>Підкатегорія</span>
+    </div>
+    <div class="fsq">
+      <h2 class="fsq__title">Найпоширеніші питання</h2>
+      <ul class="fsq__list">
+        <li class="fsq__list-item">
+          <div class="top">
+            <img src="../images/P.svg" alt="">
+            <h4>
+              На який термін розповсюджується гарантія на випарники конденсату?
+            </h4>
+          </div>
+          <div class="bottom">
+            <img src="../images/B.svg" alt="">
+            <p>
+              Базова гарантія на випарник становить 1 (один) календарний рік з
+              моменту його покупки. Щоб дізнатися термін гарантії, знайдіть
+              позначку в гарантійному талоні.
+            </p>
+          </div>
+        </li>
+        <li class="fsq__list-item">
+          <div class="top">
+            <img src="../images/P.svg" alt="">
+            <h4>На що поширюється гарантія?</h4>
+          </div>
+          <div class="bottom">
+            <img src="../images/B.svg" alt="">
+            <p>
+              Дія гарантії поширюється на функціональні деталі, наприклад
+              компресор, двигун вентилятора, теплообмінник, плата управління,
+              змійовик. Щоб дізнатися інформацію, зверніться до дилера або до
+              нас через форму зворотного зв'язку (посилання на розділ зі
+              зворотним зв'язком внизу сторінки).
+            </p>
+          </div>
+        </li>
+        <li class="fsq__list-item">
+          <div class="top">
+            <img src="../images/P.svg" alt="">
+            <h4>На що не поширюється гарантія?</h4>
+          </div>
+          <div class="bottom">
+            <img src="../images/B.svg" alt="">
+            <div class="text">
+              <p>
+                Дія гарантії не поширюється на холодоагент та нефункціональні
+                деталі. Зазвичай холодоагент не потребує заміни. Проблеми з
+                холодоагентом можуть бути ознакою неправильного встановлення
+                системи або витоку. Для отримання допомоги зверніться до дилера.
+              </p>
+              <p>
+                До нефункціональних деталей належать, наприклад: кронштейни,
+                гвинти, болти, гайки. Щоб дізнатися інформацію, зверніться до
+                дилера або до нас через форму зворотного зв'язку (посилання на
+                розділ зі зворотним зв'язком внизу сторінки).
+              </p>
+              <p>
+                Дія гарантії не поширюється на нормальне зношування деталей під
+                час терміну служби Продукту.
+              </p>
+              <p>
+                Дія гарантії не поширюється на будь-які деталі, які не
+                постачаються з Продуктом і не призначаються виробником для
+                використання з ним.
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="fsq__question">
+        <h2>Не знайшли своє запитання?</h2>
+        <p>Зв'яжіться з нами, щоб отримати додаткову інформацію.</p>
+        <button>
+          Зв’язатись з нами
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+            <path d="M14.4629 15.4681V3.47659L1.93955 16L0.5 14.5605L13.0234 2.03706H1.03419V0H14.4629H15.0605H16.1265H16.5V0.37346V1.43952V2.03706V15.4681H14.4629Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+    <footer id="footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__list-one">
+        <img src="../images/logo.svg" alt="">
+        <p>
+          Copyright 2022, Climate of the future <br>
+          All Rights Reserved
+        </p>
+        <a href="not-found-page.html">Політика конфіденційності</a>
+        <a href="not-found-page.html">Умови базової гарантії</a>
+        <ul class="list__icons">
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/instagram.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/facebook.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/Twitter.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="../images/Linkedin.svg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrap">
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Сервіси</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Про нас</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Гарантія</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Оплата і доставка</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Контакти</a>
+            </li>
+            <li class="sub-list-item"><a href="fsq-page.html">F&Q</a></li>
+          </ul>
+        </div>
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Продукти</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Каталог</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Патенти та технології</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list-three">
+          <h5>Приймаємо платежі</h5>
+          <ul>
+            <li><img src="../images/PayPal.svg" alt=""></li>
+            <li><img src="../images/Stripe.svg" alt=""></li>
+            <li><img src="../images/GooglePay.svg" alt=""></li>
+            <li><img src="../images/ApplePay.svg" alt=""></li>
+            <li><img src="../images/Mastercard.svg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__form">
+        <form class="form">
+          <h4 class="form__title">Залишились питання?</h4>
+          <label class="form__label">ПІБ</label>
+          <input class="form__input" type="text" placeholder="example@mail.com">
+          <label class="form__label">Мобільний телефон</label>
+          <input class="form__input" type="text" placeholder="+380 97 68 57 067">
+        </form>
+        <button class="footer__form-btn">
+          Надіслати повідомлення
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="news">
+  <div class="container">
+    <div class="news">
+      <button class="news-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1481_858)">
+            <path d="M16.59 15.4099L12 10.8299L7.41 15.4099L6 13.9999L12 7.99991L18 13.9999L16.59 15.4099Z" fill="#FBFFFE"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1481_858">
+              <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 -1 24 24)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <p>News</p>
+    </div>
+  </div>
+</div>
+<script>
+  const openFooter = document.querySelector('.news-btn');
+  const footer = document.getElementById('footer');
+
+  openFooter.addEventListener('click', () => {
+    if (footer.style.bottom !== '40px') {
+      footer.style.bottom = '40px';
+      openFooter.style.transform = 'rotate(180deg)';
+    } else {
+      footer.style.bottom = '-100%';
+      openFooter.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
+
+  </body>
+</html>
