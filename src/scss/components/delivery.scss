@@ -1,0 +1,132 @@
+#delivery {
+  padding: 40px 0 168px 0;
+  background-color: $bg-light;
+  @media (max-width: 991px) {
+    padding: 20px 0 100px 0;
+  }
+}
+
+.delivery__title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: -0.8px;
+  margin-bottom: 40px;
+  @media (max-width: 991px) {
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 30px;
+  }
+}
+
+.delivery {
+  margin: auto;
+  @include flex(column, flex-start, flex-start);
+  gap: 24px;
+  width: 800px;
+  padding: 24px 28px;
+  border: 1px solid #1c1c1c;
+  background: #fff;
+  @media (max-width: 991px) {
+    width: 100%;
+    padding: 12px 16px;
+    gap: 20px;
+  }
+  &:not(:last-child) {
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__item {
+    @include flex(row, flex-start, flex-start);
+    gap: 40px;
+    @media (max-width: 991px) {
+      gap: 20px;
+    }
+  }
+  &__item-num {
+    @include flex(column, center, center);
+    width: 48px;
+    height: 48px;
+    border: 1px solid #000;
+    @media (max-width: 991px) {
+      width: 35px;
+      height: 35px;
+    }
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+  }
+  &__item-info {
+    width: 100%;
+    @include flex(column, flex-start, flex-start);
+    gap: 8px;
+    @media (max-width: 991px) {
+      gap: 6px;
+    }
+    h5 {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 30px;
+      @media (max-width: 991px) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+    p {
+      color: $text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      a {
+        text-decoration-line: underline;
+      }
+    }
+    ul {
+      @include flex(row, center, flex-start);
+      gap: 8px;
+      @media (max-width: 991px) {
+        gap: 6px;
+      }
+    }
+    ul > li {
+      @include flex(column, center, center);
+      gap: 16px;
+      width: 279px;
+      padding: 18px 0px;
+      text-align: center;
+      @media (max-width: 991px) {
+        gap: 10px;
+        width: 50%;
+        padding: 12px 0;
+      }
+    }
+    ol {
+      @include flex(column, flex-start, flex-start);
+      gap: 4px;
+      list-style-type: decimal;
+      list-style-position: outside;
+      margin-left: 15px;
+    }
+    ol > li {
+      color: $text;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
