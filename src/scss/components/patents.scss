@@ -1,0 +1,123 @@
+#patents {
+  background-color: $bg-light;
+  padding-bottom: 128px;
+  @media (max-width: 991px) {
+    padding-bottom: 60px;
+  }
+}
+
+.breadcrumbs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  @include flex(row, flex-start, flex-start);
+  gap: 32px;
+  @media (max-width: 991px) {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 16px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    @media (max-width: 991px) {
+      font-size: 14px;
+    }
+  }
+  span:nth-child(3) {
+    color: $grey;
+  }
+}
+
+.patents {
+  padding-left: 16px;
+  padding-right: 16px;
+  @media (max-width: 991px) {
+    padding: 0;
+  }
+  &__title {
+    color: $bg-dark;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 62px;
+    margin-bottom: 89px;
+    @media (max-width: 991px) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+  &__list {
+    @include flex(row, center, flex-start);
+    gap: 24px;
+    margin-bottom: 64px;
+    @media (max-width: 991px) {
+      @include flex(row, flex-start, flex-start);
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+    @media (max-width: 600px) {
+      @include flex(column, center, center);
+    }
+    &-item {
+      @include flex(column, center, center);
+      border: 1px solid #1c1c1c;
+      background: #fff;
+      @media (max-width: 991px) {
+        width: 40%;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    &-item .item-content {
+      padding: 24px;
+      @media (max-width: 991px) {
+        padding: 12px;
+      }
+      h5 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 32px;
+        margin-bottom: 12px;
+        @media (max-width: 991px) {
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+      }
+      p {
+        color: $text;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #f0f0f0;
+        margin-bottom: 24px;
+        @media (max-width: 991px) {
+          margin-bottom: 12px;
+        }
+      }
+      button {
+        width: 100%;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 12px 20px;
+        border: 1px solid #32d583;
+        background: #32d583;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        @include transition;
+        cursor: pointer;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          padding: 10px;
+        }
+        &:hover {
+          background: #fff;
+          color: $text;
+        }
+      }
+    }
+  }
+}
