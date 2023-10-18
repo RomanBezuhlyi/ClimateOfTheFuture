@@ -355,56 +355,154 @@
   }
 </script>
 
-    <main><div id="patents">
+    <main><div id="contacts">
   <div class="container">
     <div class="breadcrumbs">
       <span>Головна</span>
       <span>Категорія</span>
       <span>Підкатегорія</span>
     </div>
-    <div class="patents">
-      <h2 class="patents__title">Патенти та технології</h2>
-      <ul class="patents__list">
-        <li class="patents__list-item">
-          <img src="./images/plug.png" alt="">
-          <div class="item-content">
-            <h5>Технологія енергоефективності</h5>
-            <p>
-              Це технологія, яка використовує розсіяну енергію довкілля для
-              опалення будівлі. Випарник конденсату відбирає тепло повітря та
-              спрямовує його у систему опалення.
-            </p>
-            <button type="button">Завантажити PDF файл</button>
+    <div class="contacts">
+      <h2 class="contacts__title">Задати питання</h2>
+      <p class="contacts__text">
+        Ми завжди на зв’язку і готові відповісти на наявні питання щодо
+        продукції або співпраці
+      </p>
+      <form class="contacts__form">
+        <div class="contacts__form-input">
+          <label for="name">ПІБ</label>
+          <div class="input-wrap">
+            <input type="text" name="name" placeholder="example@mail.com">
+            <img class="icon" src="./images/user.svg" alt="">
           </div>
-        </li>
-        <li class="patents__list-item">
-          <img src="./images/plug.png" alt="">
-          <div class="item-content">
-            <h5>Технологія енергоефективності</h5>
-            <p>
-              Це технологія, яка використовує розсіяну енергію довкілля для
-              опалення будівлі. Випарник конденсату відбирає тепло повітря та
-              спрямовує його у систему опалення.
-            </p>
-            <button type="button">Завантажити PDF файл</button>
+        </div>
+        <div class="contacts__form-input">
+          <label for="email">Email</label>
+          <div class="input-wrap">
+            <input type="text" name="email" placeholder="example@mail.com">
+            <img class="icon" src="./images/at-sign.svg" alt="">
           </div>
-        </li>
-        <li class="patents__list-item">
-          <img src="./images/plug.png" alt="">
-          <div class="item-content">
-            <h5>Технологія енергоефективності</h5>
-            <p>
-              Це технологія, яка використовує розсіяну енергію довкілля для
-              опалення будівлі. Випарник конденсату відбирає тепло повітря та
-              спрямовує його у систему опалення.
-            </p>
-            <button type="button">Завантажити PDF файл</button>
+        </div>
+        <div class="contacts__form-input">
+          <label for="number">Номер телефону</label>
+          <div class="input-wrap">
+            <input type="text" name="number" placeholder="+3 (800) 000-00-00">
+            <div class="custom-select-two">
+              <div class="select-header-two">
+                <span id="selected-language-two">UA</span>
+                <svg id="select-arrow-two" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                  <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <ul class="select-options-two">
+                <li value="en">UA</li>
+                <li value="fr">EN</li>
+              </ul>
+            </div>
           </div>
-        </li>
-      </ul>
+        </div>
+        <div class="contacts__form-textarea">
+          <label for="description">Повідомлення</label>
+          <textarea name="description" placeholder="Enter a description..."></textarea>
+        </div>
+        <div class="contacts__form-check">
+          <div class="custom-checkbox">
+            <input type="checkbox" id="myCheckbox">
+            <label for="myCheckbox"></label>
+          </div>
+          <p>
+            Надсилаючи це повідомлення, я заявляю, що прочитав і погоджуюся з
+            <a href="#">Політикою конфіденційності</a> цього сайту
+          </p>
+        </div>
+        <button type="submit" class="contacts__form-btn">
+          Відправити повідомлення
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
+          </svg>
+        </button>
+      </form>
     </div>
   </div>
 </div>
+<script>
+  const myCheckbox = document.getElementById('myCheckbox');
+
+  myCheckbox.addEventListener('change', function () {
+    // Ваш код для обробки зміни стану чекбокса тут
+    if (this.checked) {
+      // Якщо чекбокс відзначений
+    } else {
+      // Якщо чекбокс знятий
+    }
+  });
+
+  //   ==========================
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelect = document.querySelector('.custom-select');
+    const selectHeader = document.querySelector('.select-header');
+    const selectArrow = document.querySelector('#select-arrow');
+    const selectOptions = document.querySelector('.select-options');
+    const selectedLanguage = document.querySelector('#selected-language');
+
+    selectHeader.addEventListener('click', function () {
+      customSelect.classList.toggle('active');
+      selectArrow.style.transform = customSelect.classList.contains('active')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+    });
+
+    selectOptions.addEventListener('click', function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === 'LI') {
+        selectedLanguage.textContent = e.target.textContent;
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+        document.querySelector('#language').value =
+          e.target.getAttribute('value');
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  //   ======================================================
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelect = document.querySelector('.custom-select-two');
+    const selectHeader = document.querySelector('.select-header-two');
+    const selectArrow = document.querySelector('#select-arrow-two');
+    const selectOptions = document.querySelector('.select-options-two');
+    const selectedLanguage = document.querySelector('#selected-language-two');
+
+    selectHeader.addEventListener('click', function () {
+      customSelect.classList.toggle('active');
+      selectArrow.style.transform = customSelect.classList.contains('active')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+    });
+
+    selectOptions.addEventListener('click', function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === 'LI') {
+        selectedLanguage.textContent = e.target.textContent;
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+        document.querySelector('#language-two').value =
+          e.target.getAttribute('value');
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script>
 </main>
     <footer id="footer">
   <div class="container">
