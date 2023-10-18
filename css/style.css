@@ -792,7 +792,7 @@ body {
 }
 
 #main {
-  background-image: url(../../images/main.png);
+  background-image: url(../images/main.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -1150,6 +1150,131 @@ body {
 .not-found__info__btns .btn-green:hover {
   color: #344054;
   background: #fff;
+}
+
+#patents {
+  background-color: #fbfffe;
+  padding-bottom: 128px;
+}
+
+.breadcrumbs {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 32px;
+}
+
+.breadcrumbs span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.breadcrumbs span:nth-child(3) {
+  color: #6d7d8b;
+}
+
+.patents {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.patents__title {
+  color: #1c1c1c;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 62px;
+  margin-bottom: 89px;
+}
+
+.patents__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 64px;
+}
+
+.patents__list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #1c1c1c;
+  background: #fff;
+}
+
+.patents__list-item .item-content {
+  padding: 24px;
+}
+
+.patents__list-item .item-content h5 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 12px;
+}
+
+.patents__list-item .item-content p {
+  color: #25313c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.patents__list-item .item-content button {
+  width: 100%;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 12px 20px;
+  border: 1px solid #32d583;
+  background: #32d583;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.patents__list-item .item-content button:hover {
+  background: #fff;
+  color: #25313c;
 }
 
 #footer {
@@ -1760,6 +1885,71 @@ body {
         flex-wrap: wrap;
   }
 
+  #patents {
+    padding-bottom: 60px;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .breadcrumbs span {
+    font-size: 14px;
+  }
+
+  .patents {
+    padding: 0;
+  }
+
+  .patents__title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .patents__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  .patents__list-item {
+    width: 40%;
+  }
+
+  .patents__list-item .item-content {
+    padding: 12px;
+  }
+
+  .patents__list-item .item-content h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .patents__list-item .item-content p {
+    margin-bottom: 12px;
+  }
+
+  .patents__list-item .item-content button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
   #footer {
     padding: 23px 0 12px 0;
     height: calc(100vh - 40px);
@@ -1944,6 +2134,28 @@ body {
   .footer__form-btn {
     font-size: 14px;
     padding: 6px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .patents__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .patents__list-item {
+    width: 100%;
   }
 }
 
