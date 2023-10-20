@@ -1,0 +1,1146 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+  <style>
+    .loaded {
+      opacity: 1;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231021010540">
+  <title>Project</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231021010540">
+</head>
+
+  <body>
+    <header id="header">
+  <div class="container">
+    <div class="header">
+      <div class="header__logo">
+        <a href="index.html"><img src="./images/logo.svg" alt="logo"></a>
+      </div>
+      <ul class="header__nav">
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Продукти</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Наші розробки</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="about-us-page.html">Про нас</a>
+        </li>
+        <li class="header__nav-item">
+          <a href="not-found-page.html">Контакти</a>
+        </li>
+      </ul>
+      <ul class="header__select">
+        <li class="lang">
+          <div class="custom-select">
+            <div class="select-header">
+              <span id="selected-language">UA</span>
+              <svg id="select-arrow" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <ul class="select-options">
+              <li value="en">UA</li>
+              <li value="fr">EN</li>
+            </ul>
+          </div>
+        </li>
+        <li class="basket">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_1457_3229)">
+              <path d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967M8.33301 17.4999C8.33301 17.9602 7.95991 18.3333 7.49967 18.3333C7.03944 18.3333 6.66634 17.9602 6.66634 17.4999C6.66634 17.0397 7.03944 16.6666 7.49967 16.6666C7.95991 16.6666 8.33301 17.0397 8.33301 17.4999ZM17.4997 17.4999C17.4997 17.9602 17.1266 18.3333 16.6663 18.3333C16.2061 18.3333 15.833 17.9602 15.833 17.4999C15.833 17.0397 16.2061 16.6666 16.6663 16.6666C17.1266 16.6666 17.4997 17.0397 17.4997 17.4999Z" stroke="#FBFFFE" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1457_3229">
+                <rect width="20" height="20" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="basket__dot"></div>
+        </li>
+      </ul>
+      <button class="burger" id="burgerButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="3" viewBox="0 0 24 3" fill="none">
+          <path d="M1 1.65747H23" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div style="display: none" id="menu">
+  <div class="container">
+    <ul class="mobile__nav">
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Продукти</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Наші розробки</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="about-us-page.html">Про нас</a>
+      </li>
+      <li class="mobile__nav-item">
+        <a href="not-found-page.html">Контакти</a>
+      </li>
+    </ul>
+    <ul class="menu products" id="products-menu">
+      <li class="menu__item">
+        <img class="menu__item-img" src="./images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            настінний
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="./images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            для зовнішнього блоку
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="./images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>
+            Випарник конденсату<br>
+            для внутрішнього блоку
+          </h5>
+          <p>Зменшує витрату елктроенергії</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+    </ul>
+    <ul class="menu our-designs" id="our-designs-menu">
+      <li class="menu__item">
+        <img class="menu__item-img" src="./images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>Кондеціонери</h5>
+          <p>Приємна ціна</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item">
+        <img class="menu__item-img" src="./images/header-plug.png" alt="">
+        <div class="menu__item-info">
+          <h5>Заслонки</h5>
+          <p>Приємна ціна</p>
+          <p>Провірена якість</p>
+        </div>
+      </li>
+      <li class="menu__item-btn">
+        <button class="btn">
+          Дізнатися більше
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+            <path d="M12.4688 13.2237V3.23081L2.03263 13.667L0.833008 12.4674L11.2692 2.03121H1.27816V0.333659H12.4688H12.9667H13.8551H14.1663V0.644876V1.53326V2.03121V13.2237H12.4688Z"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelect = document.querySelector('.custom-select');
+    const selectHeader = document.querySelector('.select-header');
+    const selectArrow = document.querySelector('#select-arrow');
+    const selectOptions = document.querySelector('.select-options');
+    const selectedLanguage = document.querySelector('#selected-language');
+
+    selectHeader.addEventListener('click', function () {
+      customSelect.classList.toggle('active');
+      selectArrow.style.transform = customSelect.classList.contains('active')
+        ? 'rotate(180deg)'
+        : 'rotate(0deg)';
+    });
+
+    selectOptions.addEventListener('click', function (e) {
+      console.log(e.target.tagName);
+      if (e.target.tagName === 'LI') {
+        selectedLanguage.textContent = e.target.textContent;
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+        document.querySelector('#language').value =
+          e.target.getAttribute('value');
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (!customSelect.contains(e.target)) {
+        customSelect.classList.remove('active');
+        selectArrow.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  // ==========================================================
+
+  if (window.innerWidth > 991) {
+    document.addEventListener('DOMContentLoaded', function () {
+      const productsMenu = document.getElementById('products-menu');
+      const ourDesignsMenu = document.getElementById('our-designs-menu');
+      const menu = document.getElementById('menu');
+      const firstItem = document.querySelector(
+        '.header__nav-item:nth-child(1)'
+      );
+      const secondItem = document.querySelector(
+        '.header__nav-item:nth-child(2)'
+      );
+
+      document
+        .querySelector('.header__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'flex';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'flex';
+          firstItem.classList.add('active');
+          secondItem.classList.remove('active');
+        });
+
+      document
+        .querySelector('.header__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'flex';
+          menu.style.display = 'flex';
+          firstItem.classList.remove('active');
+          secondItem.classList.add('active');
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.header__nav')) {
+          productsMenu.style.display = 'none';
+          ourDesignsMenu.style.display = 'none';
+          menu.style.display = 'none';
+          firstItem.classList.remove('active');
+          secondItem.classList.remove('active');
+        }
+      });
+    });
+  }
+
+  // ==================================================
+  const burgerButton = document.querySelector('.burger');
+  const menuMobile = document.getElementById('menu');
+
+  if (window.innerWidth < 991) {
+    burgerButton.addEventListener('click', () => {
+      if (menuMobile.style.display === 'none') {
+        menuMobile.style.display = 'flex';
+        menuMobile.style.display = 'flex';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="35"
+        viewBox="0 0 34 35"
+        fill="#fbfffe"
+      >
+        <path
+          d="M21.8041 24.4444L16.8418 19.4821L11.8795 24.4443C11.6163 24.7076 11.2593 24.8554 10.8871 24.8554C10.5148 24.8554 10.1578 24.7076 9.89461 24.4443C9.63139 24.1811 9.48352 23.8241 9.48352 23.4519C9.48352 23.0797 9.63139 22.7227 9.89461 22.4594L14.8569 17.4972L9.89461 12.5349C9.63139 12.2717 9.48352 11.9147 9.48352 11.5424C9.48352 11.1702 9.63139 10.8132 9.89461 10.55C10.1578 10.2868 10.5148 10.1389 10.8871 10.1389C11.2593 10.1389 11.6163 10.2868 11.8795 10.55L16.8418 15.5122L21.8041 10.55C22.0673 10.2868 22.4243 10.1389 22.7965 10.1389C23.1688 10.1389 23.5258 10.2868 23.789 10.55C24.0522 10.8132 24.2001 11.1702 24.2001 11.5424C24.2001 11.9147 24.0522 12.2717 23.789 12.5349L18.8267 17.4972L23.789 22.4594C24.0522 22.7227 24.2001 23.0797 24.2001 23.4519C24.2001 23.8241 24.0522 24.1811 23.789 24.4443C23.5258 24.7076 23.1688 24.8554 22.7965 24.8554C22.4243 24.8554 22.0673 24.7076 21.8041 24.4444Z"
+        />
+      </svg>
+    `;
+      } else {
+        menuMobile.style.display = 'none';
+        burgerButton.innerHTML = `
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="3"
+        viewBox="0 0 24 3"
+        fill="none"
+      >
+        <path
+          d="M1 1.65747H23"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
+    `;
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const products = document.querySelector('.products');
+      const ourDesigns = document.querySelector('.our-designs');
+      const firstItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(1)'
+      );
+      const secondItemMob = document.querySelector(
+        '.mobile__nav-item:nth-child(2)'
+      );
+      const body = document.querySelector('body');
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(1) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'flex';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.add('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document
+        .querySelector('.mobile__nav-item:nth-child(2) a')
+        .addEventListener('click', function (e) {
+          e.preventDefault();
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'flex';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.add('active');
+          body.style.overflow = 'hidden';
+        });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.mobile__nav')) {
+          menuMobile.style.height = 'auto';
+          products.style.display = 'none';
+          ourDesigns.style.display = 'none';
+          firstItemMob.classList.remove('active');
+          secondItemMob.classList.remove('active');
+          body.style.overflow = 'none';
+        }
+      });
+    });
+  }
+</script>
+
+    <main><div id="about-us">
+  <div class="container">
+    <div class="about-us">
+      <h2 class="about-us__title">Про нас</h2>
+      <img class="about-us__img" src="./images/about-us.png" alt="">
+      <div class="about-us__author">
+        <div class="about-us__author-content">
+          <img src="./images/logo-dark.svg" alt="">
+          <p>
+            Авторський колектив з більш ніж 20-ти річним досвідом роботи у
+            досягненні знань у HAVAC індустрії, які об'єднані над вирішенням
+            завдань пошуку нових та удосконаленням уже існуючих технологій у
+            галузі холодогенних систем.
+          </p>
+        </div>
+        <img class="about-us__author-img" src="./images/about-us-2.png" alt="">
+      </div>
+      <ul class="about-us__temp">
+        <li class="about-us__temp-item">
+          <img src="./images/abus-1.svg" alt="">
+          <div class="item-info">
+            <h6>Нагрів</h6>
+            <p>
+              We are a leading firm in providing quality and value to our
+              customers. We like what we do.
+            </p>
+          </div>
+        </li>
+        <li class="about-us__temp-item">
+          <img src="./images/abus-2.svg" alt="">
+          <div class="item-info">
+            <h6>Охолодження</h6>
+            <p>
+              Our managers are always ready to answer your questions. You can
+              call us during the weekends and at night.
+            </p>
+          </div>
+        </li>
+        <li class="about-us__temp-item">
+          <img src="./images/abus-3.svg" alt="">
+          <div class="item-info">
+            <h6>Гаряче водопостачання</h6>
+            <p>
+              Each member of our team has at least 5 years of legal experience.
+              They use their knowledge to make our clients’ lives better.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="about-us__why-us">
+        <h2 class="about-us__why-us-title">Чому обирають нас?</h2>
+        <ul class="why-us">
+          <li class="why-us__item">
+            <img src="./images/percent.svg" alt="">
+            <h6>Без переплат</h6>
+            <p>Підберемо та розрахуємо обладнання точно під ваш проект</p>
+          </li>
+          <li class="why-us__item">
+            <img src="./images/thirty.svg" alt="">
+            <h6>Оплата за місяць</h6>
+            <p>Купуйте зараз і платіть через 30 днів без відсотків</p>
+          </li>
+          <li class="why-us__item">
+            <img src="./images/succ.svg" alt="">
+            <h6>Обслуговування за гарантією</h6>
+            <p>
+              Отримайте дворічну гарантію з обслуговуванням від наших майстрів
+            </p>
+          </li>
+          <li class="why-us__item">
+            <img src="./images/seq.svg" alt="">
+            <h6>Безпечний платіж</h6>
+            <p>
+              Користуйтеся 100% безпечною онлайн-оплатою у нашому
+              інтернет-магазині
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="about-us__clients">
+        <div class="about-us__info">
+          <h4>500+</h4>
+          <p>Задоволених клієнтів уже використовують нашу продукцію</p>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/airbnb.svg" alt="">
+              <img src="./images/google.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/amazon.svg" alt="">
+              <img src="./images/ola.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/fedex.svg" alt="">
+              <img src="./images/walmart.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/microsoft.svg" alt="">
+              <img src="./images/oyo.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/airbnb.svg" alt="">
+              <img src="./images/google.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__clients-slide">
+              <img src="./images/amazon.svg" alt="">
+              <img src="./images/ola.svg" alt="">
+            </div>
+          </div>
+          <div class="swiper-btns">
+            <button class="swiper-prev">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13.0328 2.53224L4.55354 11.0115L22.2643 11.0115L22.2643 13.0473L4.55356 13.0473L13.0312 21.525L11.5908 22.9654L2.09523 13.4698L1.67272 13.0473L0.918908 12.2935L0.654808 12.0294L0.918884 11.7653L1.67271 11.0115L2.09523 10.589L11.5924 1.09182L13.0328 2.53224Z" fill="#1C1C1C"/>
+              </svg>
+            </button>
+            <button class="swiper-next">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M10.9047 21.4678L19.384 12.9885L1.67319 12.9885L1.67317 10.9527L19.3839 10.9527L10.9063 2.47502L12.3467 1.0346L21.8423 10.5302L22.2648 10.9527L23.0186 11.7065L23.2827 11.9706L23.0186 12.2347L22.2648 12.9885L21.8423 13.411L12.3451 22.9082L10.9047 21.4678Z" fill="#1C1C1C"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="about-us__mission">
+        <div class="about-us__mission-info">
+          <h3>Наша робота та місія</h3>
+          <p>
+            Конструкторське бюро Climate of the future вже 20 років розробляє та
+            покращує кліматичне обладнання для виробництв, комерційних і
+            житлових будинків. Ми створюємо та впроваджуємо рішення HVAC, що
+            працюють на збереження довкілля й вашого бюджету.
+          </p>
+        </div>
+        <div class="about-us__mission-video">
+          <video id="missionVideo" controls>
+            <source src="https://www.shutterstock.com/shutterstock/videos/1058319484/preview/stock-footage-business-financial-downtown-city-and-skyscrapers-tower-building-at-marina-bay-timelapse-hyperlapse.webm" type="video/mp4">
+          </video>
+          <img id="playButton" src="./images/video.png" alt="">
+        </div>
+      </div>
+      <div class="about-us__press">
+        <div class="about-us__press-info">
+          <h4>Преса про нас</h4>
+          <p>Задоволених клієнтів уже використовують нашу продукцію</p>
+          <button>
+            Приєднатися до списку
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
+              <path d="M12.4688 13.2234V3.23048L2.03263 13.6667L0.833008 12.4671L11.2692 2.03088H1.27816V0.333323H12.4688H12.9667H13.8551H14.1663V0.64454V1.53293V2.03088V13.2234H12.4688Z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="swiper mySwiperTwo">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/airbnb.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/amazon.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/fedex.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/microsoft.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/airbnb.svg" alt="">
+            </div>
+            <div class="swiper-slide about-us__press-slide">
+              <img src="./images/amazon.svg" alt="">
+            </div>
+          </div>
+          <div class="swiper-btns">
+            <button class="swiper-prev-two">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M13.0328 2.53224L4.55354 11.0115L22.2643 11.0115L22.2643 13.0473L4.55356 13.0473L13.0312 21.525L11.5908 22.9654L2.09523 13.4698L1.67272 13.0473L0.918908 12.2935L0.654808 12.0294L0.918884 11.7653L1.67271 11.0115L2.09523 10.589L11.5924 1.09182L13.0328 2.53224Z" fill="#1C1C1C"/>
+              </svg>
+            </button>
+            <button class="swiper-next-two">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M10.9047 21.4678L19.384 12.9885L1.67319 12.9885L1.67317 10.9527L19.3839 10.9527L10.9063 2.47502L12.3467 1.0346L21.8423 10.5302L22.2648 10.9527L23.0186 11.7065L23.2827 11.9706L23.0186 12.2347L22.2648 12.9885L21.8423 13.411L12.3451 22.9082L10.9047 21.4678Z" fill="#1C1C1C"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="about-us__review">
+        <h4 class="about-us__review-title">Відгуки</h4>
+        <div class="swiper mySwiperThree">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide about-us__review-slide">
+              <div class="rating">
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Мені тепловий насос був потрібний для басейну. Модель Climate
+                  of the future ідеально підійшла за співвідношенням
+                  ціна-якість. Рекомендую, до того ж, доставка та встановлення
+                  швидкі.
+                </p>
+                <span>eugeniysmetaniuk@gmail.com</span>
+              </div>
+            </div>
+            <div class="swiper-slide about-us__review-slide">
+              <div class="rating">
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Мені тепловий насос був потрібний для басейну. Модель Climate
+                  of the future ідеально підійшла за співвідношенням
+                  ціна-якість. Рекомендую, до того ж, доставка та встановлення
+                  швидкі.
+                </p>
+                <span>eugeniysmetaniuk@gmail.com</span>
+              </div>
+            </div>
+            <div class="swiper-slide about-us__review-slide">
+              <div class="rating">
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Зважився на придбання теплового насоса «Хладоген-вода» через
+                  можливість використовувати на охолодження. Стійко переносить і
+                  високі, і низькі температури, за мікроклімат будинку в новому
+                  сезоні можу не побоюватися!
+                </p>
+                <span>levarchesky@gmail.com</span>
+              </div>
+            </div>
+            <div class="swiper-slide about-us__review-slide">
+              <div class="rating">
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Я шукала найбільш «френдлі» варіант для екології, тому
+                  вибирала серед пристроїв, що працюють на R32, до того ж, з
+                  ними простіше та безпечніше працювати. Приємно здивував ККД
+                  теплонасоса та можливість використовувати його цілий рік.
+                </p>
+                <span>maria.fedorenko@gmail.com</span>
+              </div>
+            </div>
+            <div class="swiper-slide about-us__review-slide">
+              <div class="rating">
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="star">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <g clip-path="url(#clip0_643_35502)">
+                      <path d="M14.43 10L12 2L9.57 10H2L8.18 14.41L5.83 22L12 17.31L18.18 22L15.83 14.41L22 10H14.43Z" fill="#1C1C1C"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_643_35502">
+                        <rect width="24" height="24" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="review">
+                <p>
+                  Мені тепловий насос був потрібний для басейну. Модель Climate
+                  of the future ідеально підійшла за співвідношенням
+                  ціна-якість. Рекомендую, до того ж, доставка та встановлення
+                  швидкі.
+                </p>
+                <span>eugeniysmetaniuk@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-btns">
+          <button class="swiper-prev-three">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M13.0328 2.53224L4.55354 11.0115L22.2643 11.0115L22.2643 13.0473L4.55356 13.0473L13.0312 21.525L11.5908 22.9654L2.09523 13.4698L1.67272 13.0473L0.918908 12.2935L0.654808 12.0294L0.918884 11.7653L1.67271 11.0115L2.09523 10.589L11.5924 1.09182L13.0328 2.53224Z" fill="#1C1C1C"/>
+            </svg>
+          </button>
+          <button class="swiper-next-three">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.9047 21.4678L19.384 12.9885L1.67319 12.9885L1.67317 10.9527L19.3839 10.9527L10.9063 2.47502L12.3467 1.0346L21.8423 10.5302L22.2648 10.9527L23.0186 11.7065L23.2827 11.9706L23.0186 12.2347L22.2648 12.9885L21.8423 13.411L12.3451 22.9082L10.9047 21.4678Z" fill="#1C1C1C"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="about-us__questions">
+        <div class="about-us__questions-form">
+          <h4>Залишились питання?</h4>
+          <form class="form">
+            <label>ПІБ</label>
+            <input type="text" placeholder="example@mail.com">
+            <label>Мобільний телефон</label>
+            <input type="text" placeholder="+380 97 68 57 067">
+          </form>
+          <button>
+            Надіслати повідомлення
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+              <path d="M14.4629 16.3504V4.35885L1.93955 16.8823L0.5 15.4427L13.0234 2.91933H1.03419V0.882263H14.4629H15.0605H16.1265H16.5V1.25572V2.32179V2.91933V16.3504H14.4629Z"/>
+            </svg>
+          </button>
+        </div>
+        <img src="./images/question.png" alt="" class="about-us__questions-img">
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231021010540"></script>
+
+  
+  <script>
+    var swiper = new Swiper('.mySwiper', {
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 4,
+          spaceBetween: 60,
+        },
+        1223: {
+          slidesPerView: 4.8,
+          spaceBetween: 86,
+        },
+      },
+    });
+
+    // ================================
+
+    var swiper = new Swiper('.mySwiperTwo', {
+      navigation: {
+        nextEl: '.swiper-next-two',
+        prevEl: '.swiper-prev-two',
+      },
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 4,
+          spaceBetween: 93,
+        },
+      },
+    });
+
+    // ================================
+
+    var swiper = new Swiper('.mySwiperThree', {
+      navigation: {
+        nextEl: '.swiper-next-three',
+        prevEl: '.swiper-prev-three',
+      },
+      slidesPerView: 1,
+      spaceBetween: 16,
+      centeredSlides: false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        991: {
+          slidesPerView: 3.3,
+          spaceBetween: 32,
+        },
+      },
+    });
+
+    // ==========================
+
+    const playButton = document.getElementById('playButton');
+    const missionVideo = document.getElementById('missionVideo');
+
+    playButton.addEventListener('click', function () {
+      missionVideo.style.display = 'block';
+      missionVideo.play();
+      playButton.style.display = 'none';
+    });
+
+    missionVideo.addEventListener('ended', function () {
+      missionVideo.style.display = 'none';
+      playButton.style.display = 'block';
+    });
+  </script>
+</div>
+</main>
+    <footer id="footer">
+  <div class="container">
+    <div class="footer" style="justify-content: space-between">
+      <div class="footer__list-one">
+        <a href="index.html"><img src="./images/logo.svg" alt=""></a>
+        <p>
+          Copyright 2022, Climate of the future <br>
+          All Rights Reserved
+        </p>
+        <a href="not-found-page.html">Політика конфіденційності</a>
+        <a href="not-found-page.html">Умови базової гарантії</a>
+        <ul class="list__icons">
+          <li class="list__icons-item">
+            <a href="#"><img src="./images/instagram.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="./images/facebook.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="./images/Twitter.svg" alt=""></a>
+          </li>
+          <li class="list__icons-item">
+            <a href="#"><img src="./images/Linkedin.svg" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrap" style="gap: 50px">
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Сервіси</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item">
+              <a href="about-us-page.html">Про нас</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Гарантія</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="delivery-page.html">Оплата і доставка</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="not-found-page.html">Контакти</a>
+            </li>
+            <li class="sub-list-item"><a href="fsq-page.html">F&Q</a></li>
+          </ul>
+        </div>
+        <div class="footer__list-two">
+          <h5 class="sub-list-title">Продукти</h5>
+          <ul class="sub-list">
+            <li class="sub-list-item">
+              <a href="catalog-page.html">Каталог</a>
+            </li>
+            <li class="sub-list-item">
+              <a href="patents-page.html">Патенти та технології</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__list-three" style="margin-top: 0">
+          <h5>Приймаємо платежі</h5>
+          <ul>
+            <li><img src="./images/PayPal.svg" alt=""></li>
+            <li><img src="./images/Stripe.svg" alt=""></li>
+            <li><img src="./images/GooglePay.svg" alt=""></li>
+            <li><img src="./images/ApplePay.svg" alt=""></li>
+            <li><img src="./images/Mastercard.svg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div id="news">
+  <div class="container">
+    <div class="news">
+      <button class="news-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1481_858)">
+            <path d="M16.59 15.4099L12 10.8299L7.41 15.4099L6 13.9999L12 7.99991L18 13.9999L16.59 15.4099Z" fill="#FBFFFE"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1481_858">
+              <rect width="24" height="24" fill="white" transform="matrix(-1 0 0 -1 24 24)"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </button>
+      <p>News</p>
+    </div>
+  </div>
+</div>
+<script>
+  const openFooter = document.querySelector('.news-btn');
+  const footer = document.getElementById('footer');
+
+  openFooter.addEventListener('click', () => {
+    if (footer.style.bottom !== '40px') {
+      footer.style.bottom = '40px';
+      openFooter.style.transform = 'rotate(180deg)';
+    } else {
+      footer.style.bottom = '-100%';
+      openFooter.style.transform = 'rotate(0deg)';
+    }
+  });
+</script>
+
+  </body>
+</html>
