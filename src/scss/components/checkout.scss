@@ -1,0 +1,806 @@
+#checkout {
+  background: $bg-light;
+  padding: 80px 0;
+  @media (max-width: 991px) {
+    padding: 40px 0 50px 0;
+  }
+}
+.checkout {
+  &__title {
+    @include flex(row, space-between, center);
+    gap: 113px;
+    margin-bottom: 80px;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      width: 539px;
+      color: #000;
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 60px;
+      letter-spacing: -0.96px;
+      @media (max-width: 991px) {
+        width: 100%;
+        font-size: 36px;
+        line-height: 30px;
+      }
+    }
+    p {
+      width: 628px;
+      color: #646464;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      @media (max-width: 991px) {
+        width: 100%;
+        line-height: 18px;
+      }
+    }
+    p > span {
+      color: #000;
+    }
+  }
+}
+.checkout__content {
+  @include flex(row, space-between, flex-start);
+  gap: 80px;
+  width: 100%;
+  @media (max-width: 991px) {
+    @include flex(column, center, center);
+    gap: 40px;
+  }
+  &-left {
+    width: 50%;
+    @include flex(column, flex-start, flex-start);
+    gap: 40px;
+    @media (max-width: 991px) {
+      width: 100%;
+      gap: 20px;
+    }
+  }
+  .card {
+    @include flex(column, flex-start, center);
+    padding: 32px;
+    border: 1px solid $bg-dark;
+    background: #fff;
+    @media (max-width: 991px) {
+      padding: 16px;
+      width: 100%;
+    }
+    &__img {
+      margin-bottom: 32px;
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+    }
+    &__title {
+      color: #000;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 32px;
+      margin-bottom: 32px;
+      @media (max-width: 991px) {
+        font-size: 18px;
+        margin-bottom: 16px;
+      }
+    }
+    &__price {
+      width: 100%;
+      @include flex(row, space-between, center);
+      margin-bottom: 24px;
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+      &-key {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &-value {
+        color: #000;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        @media (max-width: 991px) {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+    }
+    &__quantity {
+      width: 100%;
+      @include flex(row, space-between, center);
+      margin-bottom: 24px;
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+      &-key {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    &__discount {
+      width: 100%;
+      @include flex(row, space-between, center);
+      margin-bottom: 24px;
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+      &-key {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &-value {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+    &__total {
+      width: 100%;
+      @include flex(row, space-between, center);
+      margin-bottom: 32px;
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+      &-key {
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+      &-value {
+        color: #000;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        @media (max-width: 991px) {
+          font-size: 14px;
+          line-height: 18px;
+        }
+        span {
+          color: #9096a3;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-right: 8px;
+          @media (max-width: 991px) {
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+    &__buttons {
+      @include flex(row, space-between, flex-start);
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 24px;
+      @media (max-width: 991px) {
+        gap: 12px;
+      }
+      &-edit {
+        width: 256px;
+        height: 44px;
+        padding: 10px 18px;
+        color: $bg-light;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        background: #32d583;
+        border: 1px solid #32d583;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        cursor: pointer;
+        @include transition;
+        @media (max-width: 600px) {
+          width: 100%;
+          height: 40px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        &:hover {
+          background: #fff;
+          color: $text;
+        }
+      }
+      &-delete {
+        width: 256px;
+        height: 44px;
+        padding: 10px 18px;
+        color: #344054;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        border: 1px solid #d0d5dd;
+        background: #fbfffe;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        cursor: pointer;
+        @include transition;
+        @media (max-width: 600px) {
+          width: 100%;
+          height: 40px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+        &:hover {
+          background: #d0d5dd;
+          color: $text;
+        }
+      }
+    }
+  }
+  &-right {
+    width: 50%;
+    @include flex(column, center, center);
+    gap: 40px;
+    padding: 40px;
+    background: $bg-dark;
+    @media (max-width: 991px) {
+      width: 100%;
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+  .card-form {
+    width: 100%;
+    padding: 24px;
+    background: #fff;
+    height: 75px;
+    overflow: hidden;
+    @media (max-width: 991px) {
+      padding: 16px;
+      height: 60px;
+    }
+    &__header {
+      @include flex(row, space-between, center);
+      padding-bottom: 24px;
+      border-bottom: 1px solid #eaecf0;
+      margin-bottom: 24px;
+      h6 {
+        color: #000;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+      }
+      .toggle-button {
+        @include flex(row, center, center);
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+        background: #f2f4f7;
+        cursor: pointer;
+        svg {
+          transform: rotate(180deg);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+    &__content {
+      &-input-wrap {
+        @include flex(row, space-between, flex-start);
+        width: 100%;
+        gap: 16px;
+      }
+      &-input {
+        width: 100%;
+        label {
+          display: block;
+          color: #000;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          margin-bottom: 6px;
+        }
+        input {
+          color: $bg-dark;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          width: 100%;
+          height: 40px;
+          padding: 10px 14px;
+          border: 1px solid #d0d5dd;
+          margin-bottom: 16px;
+        }
+        input::placeholder {
+          color: #9096a3;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+        }
+        .number-input {
+          position: relative;
+          .num {
+            padding-left: 45px;
+          }
+        }
+        .number-select {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0, -85%);
+        }
+
+        .number-select {
+          color: var(--gray-900, #272727);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          margin-left: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+    &__footer {
+      margin-top: 8px;
+      border-top: 1px solid #eaecf0;
+      padding-top: 24px;
+      .custom-checkbox {
+        @include flex(row, flex-start, center);
+        color: #656a70;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+    &.open {
+      height: fit-content;
+    }
+    &.open .toggle-button svg {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+#language {
+  display: none;
+}
+
+.card__quantity-select {
+  position: relative;
+}
+
+.card__quantity-select-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 5px 16px;
+  border: 1px solid #d0d5dd;
+  background: $bg-light;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.quantity-select-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  font-size: 14px;
+  color: $text;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  z-index: 11;
+}
+
+.quantity-select-options li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.select-arrow {
+  stroke: $bg-dark;
+  transition: transform 0.3s ease-in-out;
+}
+.card__quantity-select.active .quantity-select-options {
+  display: block;
+}
+
+.new-custom-select {
+  position: relative;
+  @include flex(row, space-between, center);
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.flag {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translate(0, -50%);
+}
+
+.new-custom-select select {
+  color: #101828;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  padding-left: 40px;
+}
+
+.new-custom-select .new-arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+/* Зворотній поворот стрілки на 180 градусів */
+.new-custom-select.open .new-arrow {
+  transform: rotate(180deg);
+}
+
+/* Сховати оригінальний чекбокс */
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Стилізувати контейнер для чекбокса */
+.custom-checkbox {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Стилізувати вигляд чекбокса */
+.custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #d0d5dd;
+  background: #fbfffe;
+}
+
+/* Стилізувати вигляд галочки (якщо чекбокс вибраний) */
+.custom-checkbox input:checked ~ .checkmark {
+  border: 1px solid #32d583;
+}
+
+/* Стилізувати галочку */
+.custom-checkbox .checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Відображення галочки, коли чекбокс вибраний */
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Стилізувати саму галочку */
+.custom-checkbox .checkmark:after {
+  left: 6.5px;
+  top: 2.5px;
+  width: 4px;
+  height: 9px;
+  border: solid #32d583;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Стилізація контейнера радіокнопки */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+  cursor: pointer;
+}
+
+.radio-wrap {
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+.radio-wrap-active {
+  padding: 8px;
+  border-radius: 18px;
+  background: #f9fafb;
+  margin-bottom: 8px;
+}
+.radio-wrap-active-second {
+  padding: 4px 8px 8px 8px;
+  background: #f9fafb;
+  margin-bottom: 8px;
+}
+
+/* Стилізація самої радіокнопки */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Стилізація зовнішнього вигляду радіокнопки */
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+}
+
+/* Стилізація радіокнопки, коли вона вибрана (активна) */
+.radio-container input:checked ~ .radio-checkmark {
+  border: 1px solid #32d583;
+}
+
+/* Стилізація позначки "галочки" */
+.radio-checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Відображення позначки "галочки", коли радіокнопка активна */
+.radio-container input:checked ~ .radio-checkmark:after {
+  display: block;
+}
+
+/* Стилізація позначки "галочки" (колір та положення) */
+.radio-checkmark:after {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #32d583;
+  border-radius: 50%;
+}
+
+.radio-text {
+  @include flex(row, space-between, center);
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  position: relative;
+  bottom: 2.5px;
+  p {
+    color: #656a70;
+  }
+  p.active {
+    color: #000;
+  }
+}
+
+.radio-input {
+  width: 100%;
+  position: relative;
+  input {
+    width: 100%;
+    display: flex;
+    padding: 10px 14px 10px 40px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d0d5dd;
+    background: #fbfffe;
+  }
+  input::placeholder {
+    color: #9096a3;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+.input-card-num {
+  position: relative;
+  width: 100%;
+  margin-bottom: 16px;
+  input {
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    background: #fbfffe;
+    padding: 10px 14px 10px 60px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &::placeholder {
+      color: #667085;
+    }
+  }
+  img {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 4px;
+    border: 1px solid #f2f4f7;
+    background: #fbfffe;
+    padding: 5.03px 5.642px 5.57px 6px;
+  }
+}
+.input-card-data {
+  width: 100%;
+  @include flex(row, space-between, center);
+  gap: 16px;
+  input {
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    background: #fbfffe;
+    padding: 10px 14px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    &::placeholder {
+      color: #667085;
+    }
+  }
+}
+
+.textarea-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 6px;
+}
+
+.textarea-value {
+  height: 154px;
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #d0d5dd;
+  background: #fbfffe;
+  resize: none;
+  color: #000;
+  font-family: $font-main;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  &::placeholder {
+    color: #667085;
+  }
+}
+
+.total-num {
+  @include flex(row, space-between, center);
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  span {
+    color: #656a70;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.total-delivery {
+  @include flex(row, space-between, center);
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  span {
+    color: #656a70;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.total-promo {
+  @include flex(row, space-between, center);
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  span {
+    color: #656a70;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.total-all {
+  @include flex(row, space-between, center);
+  padding: 14px 26px;
+  margin-bottom: 24px;
+  background: #eff8ff;
+  span {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
+
+.promocode {
+  width: 100%;
+  padding: 10px 14px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border: 1px solid #d0d5dd;
+  background: #fbfffe;
+  margin-bottom: 24px;
+  &::placeholder {
+    color: #9096a3;
+  }
+}
+
+.total-button {
+  color: $bg-light;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 100%;
+  height: 60px;
+  border: 1px solid rgba(50, 213, 131, 0.6);
+  background: rgba(50, 213, 131, 0.6);
+  cursor: pointer;
+  @include transition;
+  &:hover {
+    background: $button;
+  }
+}
