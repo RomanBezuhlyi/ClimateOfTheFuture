@@ -355,89 +355,385 @@
   }
 </script>
 
-    <main><div id="contacts">
+    <main><div id="checkout">
   <div class="container">
-    <div class="breadcrumbs">
-      <span>Головна</span>
-      <span>Категорія</span>
-      <span>Підкатегорія</span>
-    </div>
-    <div class="contacts">
-      <h2 class="contacts__title">Задати питання</h2>
-      <p class="contacts__text">
-        Ми завжди на зв’язку і готові відповісти на наявні питання щодо
-        продукції або співпраці
-      </p>
-      <form class="contacts__form">
-        <div class="contacts__form-input">
-          <label for="name">ПІБ</label>
-          <div class="input-wrap">
-            <input type="text" name="name" placeholder="example@mail.com">
-            <img class="icon" src="./images/user.svg" alt="">
-          </div>
-        </div>
-        <div class="contacts__form-input">
-          <label for="email">Email</label>
-          <div class="input-wrap">
-            <input type="text" name="email" placeholder="example@mail.com">
-            <img class="icon" src="./images/at-sign.svg" alt="">
-          </div>
-        </div>
-        <div class="contacts__form-input">
-          <label for="number">Номер телефону</label>
-          <div class="input-wrap">
-            <input type="text" name="number" placeholder="+3 (800) 000-00-00">
-            <div class="custom-select-two">
-              <div class="select-header-two">
-                <span id="selected-language-two">UA</span>
-                <svg id="select-arrow-two" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                  <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+    <div class="checkout">
+      <div class="checkout__title">
+        <h2>Оформлення замовлення</h2>
+        <p>
+          Після заповнення кількох даних ми надішлемо вам ваше замовлення.
+          Приділіть трохи часу і, як сюрприз для вас, скористайтеся кодом знижки
+          <span>SUMMER15OFF</span>.
+        </p>
+      </div>
+      <div class="checkout__content">
+        <div class="checkout__content-left">
+          <div class="card">
+            <img class="card__img" src="./images/checkout-card-plug.png" alt="">
+            <h6 class="card__title">
+              Випарник конденсату нового покоління «Хладоген–Вода»
+            </h6>
+            <div class="card__price">
+              <p class="card__price-key">Ціна</p>
+              <p class="card__price-value">$1 299.90</p>
+            </div>
+            <div class="card__quantity">
+              <p class="card__quantity-key">Кількість</p>
+              <div class="card__quantity-select">
+                <div class="card__quantity-select-header">
+                  <span class="quantity-selected-language">1 шт</span>
+                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                    <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <ul class="quantity-select-options">
+                  <li value="num1">1 шт</li>
+                  <li value="num2">2 шт</li>
+                </ul>
               </div>
-              <ul class="select-options-two">
-                <li value="en">UA</li>
-                <li value="fr">EN</li>
-              </ul>
+            </div>
+            <div class="card__discount">
+              <p class="card__discount-key">Знижка</p>
+              <p class="card__discount-value">-21%</p>
+            </div>
+            <div class="card__total">
+              <p class="card__total-key">Сума</p>
+              <p class="card__total-value"><span>(-$49)</span>$1 240.90</p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__buttons-edit">Редагувати</button>
+              <button class="card__buttons-delete">Видалити</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card__img" src="./images/checkout-card-plug.png" alt="">
+            <h6 class="card__title">
+              Випарник конденсату нового покоління «Хладоген–Вода»
+            </h6>
+            <div class="card__price">
+              <p class="card__price-key">Ціна</p>
+              <p class="card__price-value">$1 299.90</p>
+            </div>
+            <div class="card__quantity">
+              <p class="card__quantity-key">Кількість</p>
+              <div class="card__quantity-select">
+                <div class="card__quantity-select-header">
+                  <span class="quantity-selected-language">1 шт</span>
+                  <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                    <path d="M8.56575 12.1667L14.3991 18L20.2324 12.1667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <ul class="quantity-select-options">
+                  <li value="num1">1 шт</li>
+                  <li value="num2">2 шт</li>
+                </ul>
+              </div>
+            </div>
+            <div class="card__discount">
+              <p class="card__discount-key">Знижка</p>
+              <p class="card__discount-value">-21%</p>
+            </div>
+            <div class="card__total">
+              <p class="card__total-key">Сума</p>
+              <p class="card__total-value"><span>(-$49)</span>$1 240.90</p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__buttons-edit">Редагувати</button>
+              <button class="card__buttons-delete">Видалити</button>
             </div>
           </div>
         </div>
-        <div class="contacts__form-textarea">
-          <label for="description">Повідомлення</label>
-          <textarea name="description" placeholder="Enter a description..."></textarea>
-        </div>
-        <div class="contacts__form-check">
-          <div class="custom-checkbox">
-            <input type="checkbox" id="myCheckbox">
-            <label for="myCheckbox"></label>
+        <div class="checkout__content-right">
+          <div class="card-form">
+            <div class="card-form__header">
+              <h6>Контактні дані отримувача</h6>
+              <button class="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M12 10L8 6L4 10" stroke="#656A70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-form__content">
+              <div class="card-form__content-input">
+                <label>ПІБ</label>
+                <input type="text" placeholder="Прізвище Ім’я По-батькові">
+              </div>
+              <div class="card-form__content-input">
+                <label>Мобільний телефон</label>
+                <div class="number-input">
+                  <input class="num" type="text" placeholder="+38 (000) 000 00 00">
+                  <div class="select-container">
+                    <select id="mySelect" class="number-select">
+                      <option value="option1">UA</option>
+                      <option value="option2">EN</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="card-form__content-input">
+                <label>Електонна пошта</label>
+                <input type="text" placeholder="sample@email.com">
+              </div>
+              <div class="card-form__content-input">
+                <label>Країна доставки</label>
+                <div class="new-custom-select" id="newCountrySelect">
+                  <img class="flag" src="./images/US.svg" alt="">
+                  <select>
+                    <option value="option1">United States</option>
+                    <option value="option2">Ukraine</option>
+                    <option value="option3">Moldova</option>
+                  </select>
+                  <div class="new-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M5 7.5L10 12.5L15 7.5" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="card-form__content-input-wrap">
+                <div class="card-form__content-input">
+                  <label>Область</label>
+                  <input type="text" placeholder="Київська">
+                </div>
+                <div class="card-form__content-input">
+                  <label>Місто</label>
+                  <input type="text" placeholder="Київ">
+                </div>
+              </div>
+              <div class="card-form__content-input">
+                <label>Вулиця</label>
+                <input type="text" placeholder="Хрещатик, 2">
+              </div>
+              <div class="card-form__content-input">
+                <label>Поштовий індекс</label>
+                <input type="text" placeholder="000000">
+              </div>
+            </div>
+            <div class="card-form__footer">
+              <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Погоджуюсь на опрацювання моєї контактної інформації та підписку
+                на листи з інформаією про моє замовлення
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox">
+                <span class="checkmark"></span>
+                Запам’ятати мене на наступний візит
+              </label>
+            </div>
           </div>
-          <p>
-            Надсилаючи це повідомлення, я заявляю, що прочитав і погоджуюся з
-            <a href="#">Політикою конфіденційності</a> цього сайту
-          </p>
+          <div class="card-form">
+            <div class="card-form__header">
+              <h6>Доставка</h6>
+              <button class="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M12 10L8 6L4 10" stroke="#656A70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-form__content">
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>Fedex</p>
+                    <span>+ $14.00</span>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>DHL Worldwide</p>
+                    <span>+ $11.00</span>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>Fedex Express</p>
+                    <span>+ $14.00</span>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="radio-wrap-active">
+                <label class="radio-container"><div class="radio-text">
+                    <p class="active">Нова пошта</p>
+                    <span>+ $4.00</span>
+                  </div>
+                  <input type="radio" name="option" checked="checked">
+                  <span class="radio-checkmark"></span>
+                </label>
+                <div class="radio-input">
+                  <input type="text" placeholder="оберіть відділення">
+                  <div class="radio-input__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M17.5 8.33337C17.5 14.1667 10 19.1667 10 19.1667C10 19.1667 2.5 14.1667 2.5 8.33337C2.5 6.34425 3.29018 4.4366 4.6967 3.03007C6.10322 1.62355 8.01088 0.833374 10 0.833374C11.9891 0.833374 13.8968 1.62355 15.3033 3.03007C16.7098 4.4366 17.5 6.34425 17.5 8.33337Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M10 10.8334C11.3807 10.8334 12.5 9.71408 12.5 8.33337C12.5 6.95266 11.3807 5.83337 10 5.83337C8.61929 5.83337 7.5 6.95266 7.5 8.33337C7.5 9.71408 8.61929 10.8334 10 10.8334Z" stroke="black" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-form">
+            <div class="card-form__header">
+              <h6>Оплата</h6>
+              <button class="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M12 10L8 6L4 10" stroke="#656A70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-form__content">
+              <div class="radio-wrap-active-second">
+                <label class="radio-container"><div class="radio-text">
+                    <p class="active">Кредитна картка</p>
+                  </div>
+                  <input type="radio" name="option" checked="checked">
+                  <span class="radio-checkmark"></span>
+                </label>
+                <form>
+                  <div class="input-card-num">
+                    <input type="text" placeholder="Номер карти">
+                    <img src="./images/Mastercard.svg" alt="">
+                  </div>
+                  <div class="input-card-data">
+                    <input type="text" placeholder="MM/YY">
+                    <input type="text" placeholder="CVC">
+                  </div>
+                </form>
+              </div>
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>PayPal</p>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>Банківський перевод</p>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+              <div class="radio-wrap">
+                <label class="radio-container"><div class="radio-text">
+                    <p>Apple Pay</p>
+                  </div>
+                  <input type="radio" name="option">
+                  <span class="radio-checkmark"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="card-form">
+            <div class="card-form__header">
+              <h6>Додаткова інформація</h6>
+              <button class="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M12 10L8 6L4 10" stroke="#656A70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-form__content">
+              <label class="textarea-label">Коментар до замовлення</label>
+              <textarea class="textarea-value" placeholder="Додати коментар до замовлення"></textarea>
+            </div>
+          </div>
+          <div class="card-form">
+            <div class="card-form__header">
+              <h6>Разом до сплати</h6>
+              <button class="toggle-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M12 10L8 6L4 10" stroke="#656A70" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <div class="card-form__content">
+              <p class="total-num">
+                <span>2 товари на сумму</span><span>$32.00</span>
+              </p>
+              <p class="total-delivery">
+                <span>Доставка</span><span>$14.00</span>
+              </p>
+              <p class="total-promo">
+                <span>Промокод</span><span>(-21 %) $5.80</span>
+              </p>
+              <p class="total-all">
+                <span>Усього до сплати</span><span>$51.80</span>
+              </p>
+              <input type="text" class="promocode" placeholder="Додати промокод">
+              <button class="total-button">Оплатити замовлення ($51.80)</button>
+            </div>
+          </div>
         </div>
-        <button type="submit" class="contacts__form-btn">
-          Відправити повідомлення
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
-          </svg>
-        </button>
-      </form>
+      </div>
     </div>
   </div>
 </div>
 <script>
-  const myCheckbox = document.getElementById('myCheckbox');
+  document.addEventListener('DOMContentLoaded', function () {
+    const customSelects = document.querySelectorAll('.card__quantity-select');
 
-  myCheckbox.addEventListener('change', function () {
-    // Ваш код для обробки зміни стану чекбокса тут
-    if (this.checked) {
-      // Якщо чекбокс відзначений
-    } else {
-      // Якщо чекбокс знятий
-    }
+    customSelects.forEach(function (customSelect) {
+      const selectHeader = customSelect.querySelector(
+        '.card__quantity-select-header'
+      );
+      const selectArrow = selectHeader.querySelector('.select-arrow');
+      const selectOptions = customSelect.querySelector(
+        '.quantity-select-options'
+      );
+      const selectedLanguage = selectHeader.querySelector(
+        '.quantity-selected-language'
+      );
+
+      selectHeader.addEventListener('click', function () {
+        customSelect.classList.toggle('active');
+        selectArrow.style.transform = customSelect.classList.contains('active')
+          ? 'rotate(180deg)'
+          : 'rotate(0deg)';
+      });
+
+      selectOptions.addEventListener('click', function (e) {
+        if (e.target.tagName === 'LI') {
+          selectedLanguage.textContent = e.target.textContent;
+          customSelect.classList.remove('active');
+          selectArrow.style.transform = 'rotate(0deg)';
+          const quantityInput = customSelect.querySelector('#language');
+          quantityInput.value = e.target.getAttribute('value');
+        }
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!customSelect.contains(e.target)) {
+          customSelect.classList.remove('active');
+          selectArrow.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
   });
 
-  //   ==========================
+  //   ==================================
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const cardForms = document.querySelectorAll('.card-form');
+    cardForms.forEach((cardForm) => {
+      const header = cardForm.querySelector('.card-form__header');
+      header.addEventListener('click', () => {
+        cardForm.classList.toggle('open');
+      });
+    });
+  });
+
+  //   ===========================================
   document.addEventListener('DOMContentLoaded', function () {
     const customSelect = document.querySelector('.custom-select');
     const selectHeader = document.querySelector('.select-header');
@@ -470,37 +766,33 @@
     });
   });
 
-  //   ======================================================
-  document.addEventListener('DOMContentLoaded', function () {
-    const customSelect = document.querySelector('.custom-select-two');
-    const selectHeader = document.querySelector('.select-header-two');
-    const selectArrow = document.querySelector('#select-arrow-two');
-    const selectOptions = document.querySelector('.select-options-two');
-    const selectedLanguage = document.querySelector('#selected-language-two');
+  //   ====================================
 
-    selectHeader.addEventListener('click', function () {
-      customSelect.classList.toggle('active');
-      selectArrow.style.transform = customSelect.classList.contains('active')
-        ? 'rotate(180deg)'
-        : 'rotate(0deg)';
-    });
+  const newCustomSelect = document.getElementById('newCountrySelect');
+  const select = newCustomSelect.querySelector('select');
+  const arrow = newCustomSelect.querySelector('.new-arrow');
 
-    selectOptions.addEventListener('click', function (e) {
-      console.log(e.target.tagName);
-      if (e.target.tagName === 'LI') {
-        selectedLanguage.textContent = e.target.textContent;
-        customSelect.classList.remove('active');
-        selectArrow.style.transform = 'rotate(0deg)';
-        document.querySelector('#language-two').value =
-          e.target.getAttribute('value');
-      }
-    });
-    document.addEventListener('click', function (e) {
-      if (!customSelect.contains(e.target)) {
-        customSelect.classList.remove('active');
-        selectArrow.style.transform = 'rotate(0deg)';
-      }
-    });
+  newCustomSelect.addEventListener('click', function (event) {
+    newCustomSelect.classList.toggle('open');
+    arrow.style.transform = newCustomSelect.classList.contains('open')
+      ? 'translateY(-50%) rotate(180deg)'
+      : 'translateY(-50%) rotate(0deg)';
+    event.stopPropagation(); // Зупинити подальше поширення події
+  });
+
+  select.addEventListener('change', function () {
+    arrow.style.transform = 'translateY(-50%) rotate(0deg)'; // Повернути стрілку в початкове положення
+    setTimeout(() => {
+      newCustomSelect.classList.remove('open');
+    }, 0); // Закрити селект затримкою, щоб спрацював перший обробник click
+  });
+
+  // Додайте обробник події click на об'єкт document, щоб закрити селект при натисканні поза ним
+  document.addEventListener('click', function (event) {
+    if (!newCustomSelect.contains(event.target)) {
+      newCustomSelect.classList.remove('open');
+      arrow.style.transform = 'translateY(-50%) rotate(0deg)';
+    }
   });
 </script>
 </main>
