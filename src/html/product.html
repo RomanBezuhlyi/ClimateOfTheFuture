@@ -123,7 +123,11 @@
                 <li>Максимальна</li>
               </ul>
             </div>
-            <button class="product-form__add-btn">
+            <button
+              class="product-form__add-btn"
+              type="button"
+              id="openPopupCart"
+            >
               Додати в кошик
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -385,7 +389,11 @@
             <div class="response__date"><span>15.01.2022</span></div>
           </div>
           <div class="review-btns">
-            <button class="review-btns__add">
+            <button
+              class="review-btns__add"
+              type="button"
+              id="openPopupAddReview"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -799,6 +807,177 @@
     </div>
   </div>
 </div>
+
+<div class="popup-reverse" id="myPopupReverse">
+  <div class="popup-reverse-content">
+    <div class="popup-reverse-content__header">
+      <h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M21 11.5C21.0034 12.8199 20.6951 14.1219 20.1 15.3C19.3944 16.7118 18.3098 17.8992 16.9674 18.7293C15.6251 19.5594 14.0782 19.9994 12.5 20C11.1801 20.0035 9.87812 19.6951 8.7 19.1L3 21L4.9 15.3C4.30493 14.1219 3.99656 12.8199 4 11.5C4.00061 9.92179 4.44061 8.37488 5.27072 7.03258C6.10083 5.69028 7.28825 4.6056 8.7 3.90003C9.87812 3.30496 11.1801 2.99659 12.5 3.00003H13C15.0843 3.11502 17.053 3.99479 18.5291 5.47089C20.0052 6.94699 20.885 8.91568 21 11V11.5Z"
+            stroke="#1C1C1C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Додати відгук
+      </h4>
+      <button class="close-button" id="closePopupButton" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M15 5L5 15M5 5L15 15"
+            stroke-width="1.67"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="popup-reverse-content__form">
+      <div class="popup-reverse-content__input">
+        <label>ПІБ</label>
+        <div class="input">
+          <input type="text" placeholder="example@mail.com" />
+          <img src="./images/user.svg" alt="" />
+        </div>
+      </div>
+      <div class="popup-reverse-content__input">
+        <label>Залиште ваш відгук про товар</label>
+        <textarea placeholder="Enter a description..."></textarea>
+      </div>
+    </div>
+    <div style="display: none" class="popup-reverse-content__text">
+      <p>
+        Ваш відгук буде опубліковано за декілька хвилин, після того як буде
+        перевірений нашими модераторами.
+      </p>
+    </div>
+    <button class="popup-reverse-content__btn">
+      Додати відгук
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <path
+          d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="popup-cart" id="myPopupCart">
+  <div class="popup-cart-content">
+    <div class="popup-cart-content__header">
+      <h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z"
+            stroke="#1C1C1C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Кошик
+      </h4>
+      <button class="close-button" id="closePopupCart" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M15 5L5 15M5 5L15 15"
+            stroke-width="1.67"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="wrap-body">
+      <div class="popup-cart-content__body">
+        <ul class="table-one">
+          <li class="table-one__item">Продукт</li>
+          <li class="table-one__item">APR822W160</li>
+          <li class="table-one__item">APR2701W22-1-18 W-A</li>
+        </ul>
+        <ul class="table-two">
+          <li class="table-two__item">Ціна</li>
+          <li class="table-two__item">€ 550.00</li>
+          <li class="table-two__item">€ 550.00</li>
+        </ul>
+        <ul class="table-three">
+          <li class="table-three__item">Кількість</li>
+          <li class="table-three__item">
+            <div class="calc">
+              <button><img src="./images/plus.svg" alt="" /></button>
+              <p>2</p>
+              <button><img src="./images/minus.svg" alt="" /></button>
+            </div>
+            <button><img src="./images/x.svg" alt="" /></button>
+          </li>
+          <li class="table-three__item">
+            <div class="calc">
+              <button><img src="./images/plus.svg" alt="" /></button>
+              <p>1</p>
+              <button><img src="./images/minus.svg" alt="" /></button>
+            </div>
+            <button><img src="./images/x.svg" alt="" /></button>
+          </li>
+        </ul>
+        <ul class="table-four">
+          <li class="table-four__item">Сума</li>
+          <li class="table-four__item">55 000 ₴</li>
+          <li class="table-four__item">55 000 ₴</li>
+        </ul>
+      </div>
+    </div>
+    <div class="popup-cart-content__total">
+      <p>До оплати:</p>
+      <p>955 000 ₴</p>
+    </div>
+    <button class="popup-cart-content__btn">
+      Оформити замовлення
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
+        <path
+          d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
@@ -860,4 +1039,64 @@
       buttonIcon.style.transform = 'rotate(180deg)';
     }
   }
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupAddReview = document.getElementById('openPopupAddReview');
+  const popup = document.getElementById('myPopupReverse');
+  const body = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupButton = document.getElementById('closePopupButton');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupAddReview.addEventListener('click', () => {
+    popup.style.display = 'block';
+    body.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupButton.addEventListener('click', () => {
+    popup.style.display = 'none';
+    body.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+      body.style.overflow = 'auto';
+    }
+  });
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupCart = document.getElementById('openPopupCart');
+  const popupCart = document.getElementById('myPopupCart');
+  const bodyCart = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupCart = document.getElementById('closePopupCart');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupCart.addEventListener('click', () => {
+    popupCart.style.display = 'block';
+    bodyCart.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupCart.addEventListener('click', () => {
+    popupCart.style.display = 'none';
+    bodyCart.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupCart) {
+      popupCart.style.display = 'none';
+      bodyCart.style.overflow = 'auto';
+    }
+  });
 </script>

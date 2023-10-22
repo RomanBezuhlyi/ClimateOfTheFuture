@@ -44,7 +44,7 @@
             </ul>
           </div>
         </li>
-        <li class="basket">
+        <li class="basket" id="openPopupEmtyBasket">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -189,6 +189,51 @@
     </ul>
   </div>
 </div>
+
+<div class="popup-emty" id="myPopupEmtyBasket">
+  <div class="popup-emty-content">
+    <div class="popup-emty-content__header">
+      <h4>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z"
+            stroke="#1C1C1C"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        Кошик
+      </h4>
+      <button class="close-button" id="closePopupEmtyBasket" type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M15 5L5 15M5 5L15 15"
+            stroke-width="1.67"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="popup-emty-content__body">
+      <p>Ваш кошик наразі порожній :(</p>
+    </div>
+  </div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const customSelect = document.querySelector('.custom-select');
@@ -385,4 +430,34 @@
       });
     });
   }
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupEmtyBasket = document.getElementById('openPopupEmtyBasket');
+  const popupEmtyBasket = document.getElementById('myPopupEmtyBasket');
+  const bodyEmtyBasket = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupEmtyBasket = document.getElementById('closePopupEmtyBasket');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'block';
+    bodyEmtyBasket.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'none';
+    bodyEmtyBasket.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupEmtyBasket) {
+      popupEmtyBasket.style.display = 'none';
+      bodyEmtyBasket.style.overflow = 'auto';
+    }
+  });
 </script>

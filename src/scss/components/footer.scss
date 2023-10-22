@@ -267,3 +267,237 @@
     }
   }
 }
+
+.popup-polite {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg-light;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    width: 847px;
+    height: 730px;
+    @media (max-width: 991px) {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  &-content__header {
+    @include flex(row, space-between, center);
+    padding: 16px 24px;
+    background: #eaecf0;
+    h4 {
+      @include flex(row, flex-start, center);
+      gap: 12px;
+    }
+  }
+  &-content__text {
+    @include flex(column, flex-start, flex-start);
+    gap: 48px;
+    @media (max-width: 991px) {
+      height: 282px;
+      gap: 24px;
+    }
+  }
+  &-content__body {
+    padding: 24px;
+    @media (max-width: 991px) {
+      overflow: scroll;
+    }
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 8px;
+      @media (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+    p {
+      color: #25313c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+    ul {
+      margin-top: 39px;
+      list-style-type: disc;
+      list-style-position: inside;
+      @media (max-width: 991px) {
+        margin-top: 24px;
+      }
+    }
+    ul > li {
+      color: #25313c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &-content__btn {
+    @include flex(row, center, center);
+    gap: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 100%;
+    padding: 24px 0px;
+    background: $bg-dark;
+    border: 1px solid $bg-dark;
+    @include transition;
+    svg {
+      fill: $bg-light;
+      @include transition;
+    }
+    &:hover {
+      background: $bg-light;
+      color: $bg-dark;
+    }
+    &:hover svg {
+      fill: $bg-dark;
+    }
+  }
+}
+
+.popup-guarante {
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.5);
+  &-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $bg-light;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+    width: 847px;
+    height: 600px;
+    @media (max-width: 991px) {
+      width: 100%;
+      height: 500px;
+    }
+  }
+  &-content__header {
+    @include flex(row, space-between, center);
+    padding: 16px 24px;
+    background: #eaecf0;
+    h4 {
+      @include flex(row, flex-start, center);
+      gap: 12px;
+    }
+  }
+  &-content__text {
+    @include flex(column, flex-start, flex-start);
+    gap: 48px;
+    @media (max-width: 991px) {
+      height: 282px;
+      gap: 24px;
+    }
+  }
+  &-content__body {
+    padding: 24px 34px 24px 24px;
+    @media (max-width: 991px) {
+      overflow: scroll;
+    }
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 8px;
+      @media (max-width: 991px) {
+        font-size: 18px;
+      }
+    }
+    p {
+      color: #25313c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+    ul {
+      margin-top: 8px;
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+    .list-num {
+      margin-top: 8px;
+      list-style-type: decimal;
+      list-style-position: inside;
+    }
+    ul > li {
+      color: #25313c;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      @media (max-width: 991px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &-content__btn {
+    @include flex(row, center, center);
+    gap: 12px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 100%;
+    padding: 24px 0px;
+    background: $bg-dark;
+    border: 1px solid $bg-dark;
+    @include transition;
+    svg {
+      fill: $bg-light;
+      @include transition;
+    }
+    &:hover {
+      background: $bg-light;
+      color: $bg-dark;
+    }
+    &:hover svg {
+      fill: $bg-dark;
+    }
+  }
+}
+
+.close-button {
+  @include flex(row, center, center);
+  padding: 8px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid $bg-dark;
+  background: $bg-dark;
+  svg {
+    stroke: $bg-light;
+  }
+}
