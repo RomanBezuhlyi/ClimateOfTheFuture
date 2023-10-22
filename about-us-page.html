@@ -9,9 +9,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css?_v=20231022022300">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231022192236">
   <title>Project</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231022022300">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231022192236">
 </head>
 
   <body>
@@ -50,7 +50,7 @@
             </ul>
           </div>
         </li>
-        <li class="basket">
+        <li class="basket" id="openPopupEmtyBasket">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <g clip-path="url(#clip0_1457_3229)">
               <path d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967M8.33301 17.4999C8.33301 17.9602 7.95991 18.3333 7.49967 18.3333C7.03944 18.3333 6.66634 17.9602 6.66634 17.4999C6.66634 17.0397 7.03944 16.6666 7.49967 16.6666C7.95991 16.6666 8.33301 17.0397 8.33301 17.4999ZM17.4997 17.4999C17.4997 17.9602 17.1266 18.3333 16.6663 18.3333C16.2061 18.3333 15.833 17.9602 15.833 17.4999C15.833 17.0397 16.2061 16.6666 16.6663 16.6666C17.1266 16.6666 17.4997 17.0397 17.4997 17.4999Z" stroke="#FBFFFE" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,6 +157,28 @@
     </ul>
   </div>
 </div>
+
+<div class="popup-emty" id="myPopupEmtyBasket">
+  <div class="popup-emty-content">
+    <div class="popup-emty-content__header">
+      <h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Кошик
+      </h4>
+      <button class="close-button" id="closePopupEmtyBasket" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5L15 15" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="popup-emty-content__body">
+      <p>Ваш кошик наразі порожній :(</p>
+    </div>
+  </div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const customSelect = document.querySelector('.custom-select');
@@ -353,6 +375,36 @@
       });
     });
   }
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupEmtyBasket = document.getElementById('openPopupEmtyBasket');
+  const popupEmtyBasket = document.getElementById('myPopupEmtyBasket');
+  const bodyEmtyBasket = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupEmtyBasket = document.getElementById('closePopupEmtyBasket');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'block';
+    bodyEmtyBasket.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'none';
+    bodyEmtyBasket.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupEmtyBasket) {
+      popupEmtyBasket.style.display = 'none';
+      bodyEmtyBasket.style.overflow = 'auto';
+    }
+  });
 </script>
 
     <main><div id="about-us">
@@ -948,7 +1000,7 @@
     </div>
   </div>
   
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231022022300"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231022192236"></script>
 
   
   <script>

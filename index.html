@@ -9,9 +9,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.min.css?_v=20231022022300">
+  <link rel="stylesheet" href="css/style.min.css?_v=20231022192236">
   <title>Project</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231022022300">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231022192236">
 </head>
 
   <body>
@@ -50,7 +50,7 @@
             </ul>
           </div>
         </li>
-        <li class="basket">
+        <li class="basket" id="openPopupEmtyBasket">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <g clip-path="url(#clip0_1457_3229)">
               <path d="M0.833008 0.833252H4.16634L6.39967 11.9916C6.47588 12.3752 6.6846 12.7199 6.9893 12.9652C7.29399 13.2104 7.67526 13.3407 8.06634 13.3333H16.1663C16.5574 13.3407 16.9387 13.2104 17.2434 12.9652C17.5481 12.7199 17.7568 12.3752 17.833 11.9916L19.1663 4.99992H4.99967M8.33301 17.4999C8.33301 17.9602 7.95991 18.3333 7.49967 18.3333C7.03944 18.3333 6.66634 17.9602 6.66634 17.4999C6.66634 17.0397 7.03944 16.6666 7.49967 16.6666C7.95991 16.6666 8.33301 17.0397 8.33301 17.4999ZM17.4997 17.4999C17.4997 17.9602 17.1266 18.3333 16.6663 18.3333C16.2061 18.3333 15.833 17.9602 15.833 17.4999C15.833 17.0397 16.2061 16.6666 16.6663 16.6666C17.1266 16.6666 17.4997 17.0397 17.4997 17.4999Z" stroke="#FBFFFE" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
@@ -157,6 +157,28 @@
     </ul>
   </div>
 </div>
+
+<div class="popup-emty" id="myPopupEmtyBasket">
+  <div class="popup-emty-content">
+    <div class="popup-emty-content__header">
+      <h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6M10 21C10 21.5523 9.55228 22 9 22C8.44772 22 8 21.5523 8 21C8 20.4477 8.44772 20 9 20C9.55228 20 10 20.4477 10 21ZM21 21C21 21.5523 20.5523 22 20 22C19.4477 22 19 21.5523 19 21C19 20.4477 19.4477 20 20 20C20.5523 20 21 20.4477 21 21Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Кошик
+      </h4>
+      <button class="close-button" id="closePopupEmtyBasket" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5L15 15" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="popup-emty-content__body">
+      <p>Ваш кошик наразі порожній :(</p>
+    </div>
+  </div>
+</div>
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const customSelect = document.querySelector('.custom-select');
@@ -353,6 +375,36 @@
       });
     });
   }
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupEmtyBasket = document.getElementById('openPopupEmtyBasket');
+  const popupEmtyBasket = document.getElementById('myPopupEmtyBasket');
+  const bodyEmtyBasket = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupEmtyBasket = document.getElementById('closePopupEmtyBasket');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'block';
+    bodyEmtyBasket.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupEmtyBasket.addEventListener('click', () => {
+    popupEmtyBasket.style.display = 'none';
+    bodyEmtyBasket.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupEmtyBasket) {
+      popupEmtyBasket.style.display = 'none';
+      bodyEmtyBasket.style.overflow = 'auto';
+    }
+  });
 </script>
 
     <main><div id="main">
@@ -372,7 +424,7 @@
             <path d="M12.4688 13.2237V3.23081L2.03263 13.667L0.833008 12.4674L11.2692 2.03121H1.27816V0.333659H12.4688H12.9667H13.8551H14.1663V0.644876V1.53326V2.03121V13.2237H12.4688Z"/>
           </svg>
         </a>
-        <a class="btn-light" href="contacts-page.html">
+        <a class="btn-light" href="#" id="openPopupCall">
           Зворотній зв’язок
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" viewBox="0 0 15 14" fill="none">
             <path d="M12.4688 13.2237V3.23081L2.03263 13.667L0.833008 12.4674L11.2692 2.03121H1.27816V0.333659H12.4688H12.9667H13.8551H14.1663V0.644876V1.53326V2.03121V13.2237H12.4688Z"/>
@@ -382,6 +434,76 @@
     </div>
   </div>
 </div>
+
+<div class="popup-call" id="myPopupCall">
+  <div class="popup-call-content">
+    <div class="popup-call-content__header">
+      <h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5857 13.7874 20.5342 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.5004 10.2413 2.44866 7.27109 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23704 4.68016 9.47187 5.62282 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3777 14.5286 19.3204 14.7635 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Зворотній дзвінок
+      </h4>
+      <button class="close-button" id="closePopupCall" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5L15 15" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="popup-call-content__form">
+      <div class="popup-call-content__input">
+        <label>ПІБ</label>
+        <div class="input">
+          <input type="text" placeholder="example@mail.com">
+          <img src="./images/user.svg" alt="">
+        </div>
+      </div>
+      <div class="popup-call-content__input">
+        <label>Мобільний телефон</label>
+        <div class="input">
+          <input type="text" placeholder="example@mail.com">
+          <img src="./images/phone.svg" alt="">
+        </div>
+      </div>
+    </div>
+    <button class="popup-call-content__btn">
+      Передзвоніть мені
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupCall = document.getElementById('openPopupCall');
+  const popupCall = document.getElementById('myPopupCall');
+  const bodyCall = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupCall = document.getElementById('closePopupCall');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupCall.addEventListener('click', () => {
+    popupCall.style.display = 'block';
+    bodyCall.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupCall.addEventListener('click', () => {
+    popupCall.style.display = 'none';
+    bodyCall.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupCall) {
+      popupCall.style.display = 'none';
+      bodyCall.style.overflow = 'auto';
+    }
+  });
+</script>
 </main>
     <footer id="footer">
   <div class="container">
@@ -392,8 +514,8 @@
           Copyright 2022, Climate of the future <br>
           All Rights Reserved
         </p>
-        <a href="not-found-page.html">Політика конфіденційності</a>
-        <a href="not-found-page.html">Умови базової гарантії</a>
+        <a href="#" id="openPopupPolite">Політика конфіденційності</a>
+        <a href="#" id="openPopupGuarante">Умови базової гарантії</a>
         <ul class="list__icons">
           <li class="list__icons-item">
             <a href="#"><img src="./images/instagram.svg" alt=""></a>
@@ -487,6 +609,145 @@
     </div>
   </div>
 </div>
+
+<div class="popup-polite" id="myPopupPolite">
+  <div class="popup-polite-content">
+    <div class="popup-polite-content__header">
+      <h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g clip-path="url(#clip0_1589_1757)">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.4 15C19.2669 15.3016 19.2272 15.6362 19.286 15.9606C19.3448 16.285 19.4995 16.5843 19.73 16.82L19.79 16.88C19.976 17.0657 20.1235 17.2863 20.2241 17.5291C20.3248 17.7719 20.3766 18.0322 20.3766 18.295C20.3766 18.5578 20.3248 18.8181 20.2241 19.0609C20.1235 19.3037 19.976 19.5243 19.79 19.71C19.6043 19.896 19.3837 20.0435 19.1409 20.1441C18.8981 20.2448 18.6378 20.2966 18.375 20.2966C18.1122 20.2966 17.8519 20.2448 17.6091 20.1441C17.3663 20.0435 17.1457 19.896 16.96 19.71L16.9 19.65C16.6643 19.4195 16.365 19.2648 16.0406 19.206C15.7162 19.1472 15.3816 19.1869 15.08 19.32C14.7842 19.4468 14.532 19.6572 14.3543 19.9255C14.1766 20.1938 14.0813 20.5082 14.08 20.83V21C14.08 21.5304 13.8693 22.0391 13.4942 22.4142C13.1191 22.7893 12.6104 23 12.08 23C11.5496 23 11.0409 22.7893 10.6658 22.4142C10.2907 22.0391 10.08 21.5304 10.08 21V20.91C10.0723 20.579 9.96512 20.258 9.77251 19.9887C9.5799 19.7194 9.31074 19.5143 9 19.4C8.69838 19.2669 8.36381 19.2272 8.03941 19.286C7.71502 19.3448 7.41568 19.4995 7.18 19.73L7.12 19.79C6.93425 19.976 6.71368 20.1235 6.47088 20.2241C6.22808 20.3248 5.96783 20.3766 5.705 20.3766C5.44217 20.3766 5.18192 20.3248 4.93912 20.2241C4.69632 20.1235 4.47575 19.976 4.29 19.79C4.10405 19.6043 3.95653 19.3837 3.85588 19.1409C3.75523 18.8981 3.70343 18.6378 3.70343 18.375C3.70343 18.1122 3.75523 17.8519 3.85588 17.6091C3.95653 17.3663 4.10405 17.1457 4.29 16.96L4.35 16.9C4.58054 16.6643 4.73519 16.365 4.794 16.0406C4.85282 15.7162 4.81312 15.3816 4.68 15.08C4.55324 14.7842 4.34276 14.532 4.07447 14.3543C3.80618 14.1766 3.49179 14.0813 3.17 14.08H3C2.46957 14.08 1.96086 13.8693 1.58579 13.4942C1.21071 13.1191 1 12.6104 1 12.08C1 11.5496 1.21071 11.0409 1.58579 10.6658C1.96086 10.2907 2.46957 10.08 3 10.08H3.09C3.42099 10.0723 3.742 9.96512 4.0113 9.77251C4.28059 9.5799 4.48572 9.31074 4.6 9C4.73312 8.69838 4.77282 8.36381 4.714 8.03941C4.65519 7.71502 4.50054 7.41568 4.27 7.18L4.21 7.12C4.02405 6.93425 3.87653 6.71368 3.77588 6.47088C3.67523 6.22808 3.62343 5.96783 3.62343 5.705C3.62343 5.44217 3.67523 5.18192 3.77588 4.93912C3.87653 4.69632 4.02405 4.47575 4.21 4.29C4.39575 4.10405 4.61632 3.95653 4.85912 3.85588C5.10192 3.75523 5.36217 3.70343 5.625 3.70343C5.88783 3.70343 6.14808 3.75523 6.39088 3.85588C6.63368 3.95653 6.85425 4.10405 7.04 4.29L7.1 4.35C7.33568 4.58054 7.63502 4.73519 7.95941 4.794C8.28381 4.85282 8.61838 4.81312 8.92 4.68H9C9.29577 4.55324 9.54802 4.34276 9.72569 4.07447C9.90337 3.80618 9.99872 3.49179 10 3.17V3C10 2.46957 10.2107 1.96086 10.5858 1.58579C10.9609 1.21071 11.4696 1 12 1C12.5304 1 13.0391 1.21071 13.4142 1.58579C13.7893 1.96086 14 2.46957 14 3V3.09C14.0013 3.41179 14.0966 3.72618 14.2743 3.99447C14.452 4.26276 14.7042 4.47324 15 4.6C15.3016 4.73312 15.6362 4.77282 15.9606 4.714C16.285 4.65519 16.5843 4.50054 16.82 4.27L16.88 4.21C17.0657 4.02405 17.2863 3.87653 17.5291 3.77588C17.7719 3.67523 18.0322 3.62343 18.295 3.62343C18.5578 3.62343 18.8181 3.67523 19.0609 3.77588C19.3037 3.87653 19.5243 4.02405 19.71 4.21C19.896 4.39575 20.0435 4.61632 20.1441 4.85912C20.2448 5.10192 20.2966 5.36217 20.2966 5.625C20.2966 5.88783 20.2448 6.14808 20.1441 6.39088C20.0435 6.63368 19.896 6.85425 19.71 7.04L19.65 7.1C19.4195 7.33568 19.2648 7.63502 19.206 7.95941C19.1472 8.28381 19.1869 8.61838 19.32 8.92V9C19.4468 9.29577 19.6572 9.54802 19.9255 9.72569C20.1938 9.90337 20.5082 9.99872 20.83 10H21C21.5304 10 22.0391 10.2107 22.4142 10.5858C22.7893 10.9609 23 11.4696 23 12C23 12.5304 22.7893 13.0391 22.4142 13.4142C22.0391 13.7893 21.5304 14 21 14H20.91C20.5882 14.0013 20.2738 14.0966 20.0055 14.2743C19.7372 14.452 19.5268 14.7042 19.4 15Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_1589_1757">
+              <rect width="24" height="24" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+        Політика конфіденційності
+      </h4>
+      <button class="close-button" id="closePopupPolite" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5L15 15" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="popup-polite-content__body">
+      <div class="popup-polite-content__text">
+        <div>
+          <h5>A. Вступ</h5>
+          <p>
+            Дані правила пояснюють, як ми використовуємо вашу персональну
+            інформацію. Погоджуючись із використанням файлів-cookie при першому
+            відвіданні нашого веб-сайту, відповідно до положень даних Правил, ви
+            надаєте нам дозвіл на використання файлів-cookie при кожному вашому
+            наступному візиті.
+          </p>
+        </div>
+        <div>
+          <h5>Б. Права інтелектуальної власності</h5>
+          <p>
+            Конфіденційність користувачів нашого веб-сайту має велике значення
+            для нас, і ми докладаємо всіх зусиль для забезпечення її захисту.
+          </p>
+        </div>
+        <div>
+          <h5>В. Збір персональних даних</h5>
+          <p>
+            Збору, зберіганню та використанню підлягають наступні типи
+            персональних даних:
+          </p>
+          <ul>
+            <li>
+              Інформація про ваш комп’ютер, включаючи вашу IP-адресу,
+              географічне розташування, тип і версію браузера та операційну
+              систему;
+            </li>
+            <li>
+              Інформація про ваші відвідування та використання цього веб-сайту,
+              включаючи реферальні джерела, протяжність візитів, переглянуті
+              сторінки та шляхи навігації по сайту;
+            </li>
+            <li>
+              Інформація про адресу вашої електронної пошти, яку ви використали
+              для реєстрації на нашому веб-сайті;
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="popup-polite-content__btn">
+      Погоджуюсь з правилами використання сайту
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+<div class="popup-guarante" id="myPopupGuarante">
+  <div class="popup-guarante-content">
+    <div class="popup-guarante-content__header">
+      <h4>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#1C1C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Умови базової гарантії
+      </h4>
+      <button class="close-button" id="closePopupGuarante" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M15 5L5 15M5 5L15 15" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="popup-guarante-content__body">
+      <div class="popup-guarante-content__text">
+        <div>
+          <h5>
+            На всю техніку (далі Продукт) Climate Of The Future (далі Компанія)
+            встановлюється фіксований базовий гарантійний термін. Тривалість
+            базового гарантійного періоду:
+          </h5>
+          <ul>
+            <li>залежить від типу Продукту;</li>
+            <li>складає не менше 1 (одного) календарного року;</li>
+            <li>
+              відраховується з моменту покупки Продукту в інтернет-магазині
+              Компанії або офіційного дилера.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5>
+            Умови базової гарантії (далі Гарантія) поширюються на все обладнання
+            Компанії за таких умов:
+          </h5>
+          <ul class="list-num">
+            <li>Продукт придбано у офіційного дилера Компанії.</li>
+            <li>Отриманий Продукт підпадає під період дії Гарантії.</li>
+            <li>
+              Продукт встановлений персоналом офіційного дилерського центру.
+            </li>
+            <li>
+              Претензію щодо Гарантії отримано під час дії терміну Гарантії на
+              Продукт.
+            </li>
+            <li>
+              Продукт використовувався відповідно до інструкції з експлуатації
+              та в належних умовах.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="popup-guarante-content__btn">
+      Погоджуюсь з умовами гарантії
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M13.9629 15.4681V3.47659L1.43955 16L0 14.5605L12.5234 2.03706H0.534186V0H13.9629H14.5605H15.6265H16V0.37346V1.43952V2.03706V15.4681H13.9629Z"/>
+      </svg>
+    </button>
+  </div>
+</div>
 <script>
   const openFooter = document.querySelector('.news-btn');
   const footer = document.getElementById('footer');
@@ -498,6 +759,66 @@
     } else {
       footer.style.bottom = '-100%';
       openFooter.style.transform = 'rotate(0deg)';
+    }
+  });
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupPolite = document.getElementById('openPopupPolite');
+  const popupPolite = document.getElementById('myPopupPolite');
+  const bodyPolite = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupPolite = document.getElementById('closePopupPolite');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupPolite.addEventListener('click', () => {
+    popupPolite.style.display = 'block';
+    bodyPolite.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupPolite.addEventListener('click', () => {
+    popupPolite.style.display = 'none';
+    bodyPolite.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupPolite) {
+      popupPolite.style.display = 'none';
+      bodyPolite.style.overflow = 'auto';
+    }
+  });
+
+  // ==================================
+
+  // Отримуємо кнопку відкриття попапа та сам попап
+  const openPopupGuarante = document.getElementById('openPopupGuarante');
+  const popupGuarante = document.getElementById('myPopupGuarante');
+  const bodyGuarante = document.querySelector('body');
+
+  // Отримуємо кнопку закриття попапа
+  const closePopupGuarante = document.getElementById('closePopupGuarante');
+
+  // Додаємо обробник події для відкриття попапа
+  openPopupGuarante.addEventListener('click', () => {
+    popupGuarante.style.display = 'block';
+    bodyGuarante.style.overflow = 'hidden';
+  });
+
+  // Додаємо обробник події для закриття попапа
+  closePopupGuarante.addEventListener('click', () => {
+    popupGuarante.style.display = 'none';
+    bodyGuarante.style.overflow = 'auto';
+  });
+
+  // Додаємо обробник події для закриття попапа при кліку на поза попапом
+  window.addEventListener('click', (event) => {
+    if (event.target === popupGuarante) {
+      popupGuarante.style.display = 'none';
+      bodyGuarante.style.overflow = 'auto';
     }
   });
 </script>
