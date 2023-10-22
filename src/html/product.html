@@ -261,6 +261,506 @@
       </div>
       <img class="sixth-block__right" src="./images/three.png" alt="" />
     </div>
+    <div class="seventh-block">
+      <div class="seventh-block__review">
+        <div class="seventh-block__review-header">
+          <div class="title">
+            <h5>Відгуки</h5>
+            <div class="title-stars">
+              <img src="./images/star.svg" alt="" />
+              <img src="./images/star.svg" alt="" />
+              <img src="./images/star.svg" alt="" />
+              <img src="./images/star.svg" alt="" />
+              <img src="./images/star.svg" alt="" />
+            </div>
+            <span>15 відгуків</span>
+          </div>
+          <button class="new-toggle-button" onclick="toggleSection('review')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_740_36665)">
+                <path
+                  d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"
+                  fill="#1C1C1C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_740_36665">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="seventh-block__review-body">
+          <div class="client">
+            <div class="client__top">
+              <p class="client__name">Валерій</p>
+              <span class="client__date">15.01.2022</span>
+            </div>
+            <div class="client__stars">
+              <img src="./images/stars.svg" alt="" />
+            </div>
+            <p class="client__text">
+              Доброго дня чи планує компанія випуск (тисків)?<br />Дуже потрібна
+              річ,як на мене для всіх. Також би придбав.
+            </p>
+            <div class="client__bottom">
+              <div class="client__bottom-left">
+                <a href="#"
+                  >Відповісти
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M4.16663 9.99996H15.8333M15.8333 9.99996L9.99996 4.16663M15.8333 9.99996L9.99996 15.8333"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+                <a href="#">1 відповідь</a>
+              </div>
+              <div class="client__bottom-right">
+                <button class="dislike">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M14.1667 1.66668H16.3917C16.8633 1.65834 17.3216 1.82346 17.6795 2.1307C18.0375 2.43793 18.2701 2.8659 18.3334 3.33335V9.16668C18.2701 9.63413 18.0375 10.0621 17.6795 10.3693C17.3216 10.6766 16.8633 10.8417 16.3917 10.8334H14.1667M8.33336 12.5V15.8334C8.33336 16.4964 8.59675 17.1323 9.06559 17.6011C9.53443 18.07 10.1703 18.3334 10.8334 18.3334L14.1667 10.8334V1.66668H4.76669C4.36475 1.66214 3.97471 1.80301 3.66844 2.06334C3.36216 2.32368 3.16029 2.68593 3.10003 3.08335L1.95003 10.5833C1.91377 10.8222 1.92988 11.0661 1.99724 11.2981C2.0646 11.5302 2.18161 11.7448 2.34014 11.9271C2.49868 12.1094 2.69496 12.2551 2.91538 12.354C3.13581 12.4529 3.3751 12.5028 3.61669 12.5H8.33336Z"
+                      stroke="#667085"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  1
+                </button>
+                <button class="like">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.83341 18.3333H3.33341C2.89139 18.3333 2.46746 18.1577 2.1549 17.8451C1.84234 17.5326 1.66675 17.1087 1.66675 16.6666V10.8333C1.66675 10.3913 1.84234 9.96734 2.1549 9.65478C2.46746 9.34222 2.89139 9.16663 3.33341 9.16663H5.83341M11.6667 7.49996V4.16663C11.6667 3.50358 11.4034 2.8677 10.9345 2.39886C10.4657 1.93002 9.82979 1.66663 9.16675 1.66663L5.83341 9.16663V18.3333H15.2334C15.6354 18.3378 16.0254 18.197 16.3317 17.9366C16.6379 17.6763 16.8398 17.314 16.9001 16.9166L18.0501 9.41663C18.0863 9.17776 18.0702 8.93386 18.0029 8.70184C17.9355 8.46981 17.8185 8.2552 17.66 8.07289C17.5014 7.89057 17.3051 7.7449 17.0847 7.64597C16.8643 7.54705 16.625 7.49722 16.3834 7.49996H11.6667Z"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  1
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="response">
+            <div class="response__info">
+              <div class="response__info-title">
+                <img src="./images/climat-logo.svg" alt="" />
+                <p>Клімат Майбутнього</p>
+              </div>
+              <p class="response__info-text">
+                Спасибо за покупку. Мы рады, что смогли помочь 😉
+              </p>
+            </div>
+            <div class="response__date"><span>15.01.2022</span></div>
+          </div>
+          <div class="review-btns">
+            <button class="review-btns__add">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+              >
+                <path
+                  d="M18 9.58336C18.0029 10.6832 17.7459 11.7683 17.25 12.75C16.662 13.9265 15.7581 14.916 14.6395 15.6078C13.521 16.2995 12.2319 16.6662 10.9167 16.6667C9.81678 16.6696 8.73176 16.4126 7.75 15.9167L3 17.5L4.58333 12.75C4.08744 11.7683 3.83047 10.6832 3.83333 9.58336C3.83384 8.26815 4.20051 6.97907 4.89227 5.86048C5.58402 4.7419 6.57355 3.838 7.75 3.25002C8.73176 2.75413 9.81678 2.49716 10.9167 2.50002H11.3333C13.0703 2.59585 14.7109 3.32899 15.9409 4.55907C17.171 5.78915 17.9042 7.42973 18 9.16669V9.58336Z"
+                  stroke-width="1.67"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              Залишити відгук
+            </button>
+            <button class="review-btns__all">
+              Дивитись усі
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M4.16675 9.99996H15.8334M15.8334 9.99996L10.0001 4.16663M15.8334 9.99996L10.0001 15.8333"
+                  stroke-width="1.67"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="seventh-block__guarantes">
+        <div class="seventh-block__guarantes-header">
+          <div class="title"><h5>Гарантія та обслуговування</h5></div>
+          <button
+            class="new-toggle-button"
+            onclick="toggleSection('guarantes')"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_740_36665)">
+                <path
+                  d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"
+                  fill="#1C1C1C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_740_36665">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="seventh-block__guarantes-body">
+          <ul>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M9.99992 18.3333C9.99992 18.3333 16.6666 15 16.6666 9.99996V4.16663L9.99992 1.66663L3.33325 4.16663V9.99996C3.33325 15 9.99992 18.3333 9.99992 18.3333Z"
+                    stroke="#32D583"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <p>2 роки офіційна гарантія від виробника</p>
+            </li>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1589_3085)">
+                    <path
+                      d="M19.1666 3.33331V8.33332M19.1666 8.33332H14.1666M19.1666 8.33332L15.2999 4.69998C14.4043 3.80391 13.2963 3.14932 12.0792 2.79729C10.8622 2.44527 9.57584 2.40727 8.34016 2.68686C7.10447 2.96645 5.95975 3.55451 5.01281 4.39616C4.06586 5.23782 3.34756 6.30564 2.92492 7.49998M0.833252 16.6666V11.6666M0.833252 11.6666H5.83325M0.833252 11.6666L4.69992 15.3C5.59554 16.1961 6.70356 16.8506 7.92059 17.2027C9.13762 17.5547 10.424 17.5927 11.6597 17.3131C12.8954 17.0335 14.0401 16.4455 14.987 15.6038C15.934 14.7621 16.6523 13.6943 17.0749 12.5"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1589_3085">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <p>60 днів на гарантійне повернення</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="seventh-block__delivery">
+        <div class="seventh-block__delivery-header">
+          <div class="title"><h5>Доставка</h5></div>
+          <button class="new-toggle-button" onclick="toggleSection('delivery')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_740_36665)">
+                <path
+                  d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"
+                  fill="#1C1C1C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_740_36665">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="seventh-block__delivery-body">
+          <ul>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M13.75 7.83329L6.25 3.50829M2.725 5.79996L10 10.0083L17.275 5.79996M10 18.4V9.99996M17.5 13.3333V6.66663C17.4997 6.37435 17.4225 6.0873 17.2763 5.83426C17.13 5.58122 16.9198 5.37109 16.6667 5.22496L10.8333 1.89163C10.58 1.74535 10.2926 1.66833 10 1.66833C9.70744 1.66833 9.42003 1.74535 9.16667 1.89163L3.33333 5.22496C3.08022 5.37109 2.86998 5.58122 2.72372 5.83426C2.57745 6.0873 2.5003 6.37435 2.5 6.66663V13.3333C2.5003 13.6256 2.57745 13.9126 2.72372 14.1657C2.86998 14.4187 3.08022 14.6288 3.33333 14.775L9.16667 18.1083C9.42003 18.2546 9.70744 18.3316 10 18.3316C10.2926 18.3316 10.58 18.2546 10.8333 18.1083L16.6667 14.775C16.9198 14.6288 17.13 14.4187 17.2763 14.1657C17.4225 13.9126 17.4997 13.6256 17.5 13.3333Z"
+                    stroke="#32D583"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Поштові компанії <span>до 3 днів</span></p>
+                <p>від 60₴</p>
+              </div>
+            </li>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1589_3734)">
+                    <path
+                      d="M13.3335 13.3333V2.5H0.833496V13.3333H13.3335ZM13.3335 13.3333H19.1668V9.16667L16.6668 6.66667H13.3335V13.3333ZM6.66683 15.4167C6.66683 16.5673 5.73409 17.5 4.5835 17.5C3.4329 17.5 2.50016 16.5673 2.50016 15.4167C2.50016 14.2661 3.4329 13.3333 4.5835 13.3333C5.73409 13.3333 6.66683 14.2661 6.66683 15.4167ZM17.5002 15.4167C17.5002 16.5673 16.5674 17.5 15.4168 17.5C14.2662 17.5 13.3335 16.5673 13.3335 15.4167C13.3335 14.2661 14.2662 13.3333 15.4168 13.3333C16.5674 13.3333 17.5002 14.2661 17.5002 15.4167Z"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1589_3734">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Кур’єром по Києву <span>до 2 днів</span></p>
+                <p>Безкоштовно</p>
+              </div>
+            </li>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1589_1738)">
+                    <path
+                      d="M1.25 9.375H18.75"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 14.375V16.25C17.5 16.4158 17.4342 16.5747 17.3169 16.6919C17.1997 16.8092 17.0408 16.875 16.875 16.875H15C14.8342 16.875 14.6753 16.8092 14.5581 16.6919C14.4408 16.5747 14.375 16.4158 14.375 16.25V14.375"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5.625 14.375V16.25C5.625 16.4158 5.55915 16.5747 5.44194 16.6919C5.32473 16.8092 5.16576 16.875 5 16.875H3.125C2.95924 16.875 2.80027 16.8092 2.68306 16.6919C2.56585 16.5747 2.5 16.4158 2.5 16.25V14.375"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M5 11.875H6.25"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M13.75 11.875H15"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M17.5 9.375L15.165 4.12116C15.1159 4.01069 15.0358 3.91682 14.9344 3.85094C14.833 3.78506 14.7147 3.75 14.5938 3.75H5.40617C5.28527 3.75 5.16697 3.78506 5.0656 3.85094C4.96423 3.91682 4.88414 4.01069 4.83504 4.12116L2.5 9.375V14.375H17.5V9.375Z"
+                      stroke="#32D583"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1589_1738">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Самовивіз <span>забрати сьогодні</span></p>
+                <p>Безкоштовно</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="seventh-block__payment">
+        <div class="seventh-block__payment-header">
+          <div class="title"><h5>Оплата</h5></div>
+          <button class="new-toggle-button" onclick="toggleSection('payment')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_740_36665)">
+                <path
+                  d="M7.41 8.59003L12 13.17L16.59 8.59003L18 10L12 16L6 10L7.41 8.59003Z"
+                  fill="#1C1C1C"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_740_36665">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="seventh-block__payment-body">
+          <ul>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <path
+                    d="M11.8129 3.5185C11.8139 2.49534 9.72756 1.66663 7.15693 1.66663C4.5863 1.66663 2.50186 2.49626 2.5 3.5185M2.5 3.5185C2.5 4.54166 4.58444 5.37037 7.15693 5.37037C9.72942 5.37037 11.8139 4.54166 11.8139 3.5185L11.8139 10.7037M2.5 3.5185V14.6297C2.50093 15.6528 4.58537 16.4815 7.15693 16.4815C8.40406 16.4815 9.5301 16.2843 10.3656 15.9667M2.50093 7.22222C2.50093 8.24538 4.58538 9.0741 7.15787 9.0741C9.73036 9.0741 11.8148 8.24538 11.8148 7.22222M10.4214 12.2455C9.58133 12.5742 8.42921 12.7779 7.15693 12.7779C4.58537 12.7779 2.50093 11.9492 2.50093 10.926M17.106 11.2205C18.7424 12.8474 18.7424 15.4863 17.106 17.1131C15.4696 18.74 12.8151 18.74 11.1787 17.1131C9.54221 15.4863 9.54221 12.8474 11.1787 11.2205C12.8151 9.59362 15.4696 9.59362 17.106 11.2205Z"
+                    stroke="#32D583"
+                    stroke-width="1.67"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Готівка <span>кур'єру, у магазині, у відділенні</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1589_3889)">
+                    <path
+                      d="M17.6752 13.2416C17.145 14.4954 16.3158 15.6001 15.2601 16.4594C14.2043 17.3186 12.9541 17.9061 11.6189 18.1706C10.2836 18.4351 8.90386 18.3684 7.6003 17.9765C6.29673 17.5845 5.10903 16.8792 4.14102 15.9222C3.17302 14.9652 2.45419 13.7856 2.04737 12.4866C1.64055 11.1876 1.55814 9.8087 1.80734 8.47049C2.05653 7.13228 2.62975 5.87548 3.47688 4.80998C4.324 3.74449 5.41924 2.90272 6.66684 2.35829M18.3335 9.99996C18.3335 8.90561 18.118 7.82198 17.6992 6.81093C17.2804 5.79988 16.6666 4.88122 15.8927 4.1074C15.1189 3.33358 14.2002 2.71975 13.1892 2.30096C12.1782 1.88217 11.0945 1.66663 10.0002 1.66663V9.99996H18.3335Z"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1589_3889">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Оплата частинами <span>від Monobank та Приватбанк</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="new-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                >
+                  <g clip-path="url(#clip0_1589_3050)">
+                    <path
+                      d="M0.833496 8.33337H19.1668M2.50016 3.33337H17.5002C18.4206 3.33337 19.1668 4.07957 19.1668 5.00004V15C19.1668 15.9205 18.4206 16.6667 17.5002 16.6667H2.50016C1.57969 16.6667 0.833496 15.9205 0.833496 15V5.00004C0.833496 4.07957 1.57969 3.33337 2.50016 3.33337Z"
+                      stroke="#32D583"
+                      stroke-width="1.67"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_1589_3050">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div class="new-text">
+                <p>Безготівковий розрахунок</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="eight-block">
       <button class="eight-block__btn-one">
         <img src="./images/instruction.svg" alt="" />
@@ -341,4 +841,23 @@
       dropdown.classList.remove('open');
     });
   });
+
+  // =========================
+
+  function toggleSection(section) {
+    const sectionBody = document.querySelector(
+      `.seventh-block__${section}-body`
+    );
+    const buttonIcon = document.querySelector(
+      `.seventh-block__${section}-header .new-toggle-button svg`
+    );
+
+    if (sectionBody.style.maxHeight) {
+      sectionBody.style.maxHeight = null;
+      buttonIcon.style.transform = 'rotate(0deg)';
+    } else {
+      sectionBody.style.maxHeight = sectionBody.scrollHeight + 'px';
+      buttonIcon.style.transform = 'rotate(180deg)';
+    }
+  }
 </script>
